@@ -47,7 +47,7 @@ const PersonalDetails = () => {
     return (
         <div className="personalDetails">
         <h4>Please Fill in Leads Personal Details</h4>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="formElements">
           <label htmlFor="firstName">First Name:</label>
           <input

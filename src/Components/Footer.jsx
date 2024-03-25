@@ -1,7 +1,6 @@
 import React from "react";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import XIcon from '@mui/icons-material/X';
 
@@ -45,10 +44,10 @@ const Footer = () => {
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
       <p>© 2024 SRIVEN GROUPS, Inc. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><XIcon style={{ fontSize: '3rem', color: 'white' }} /></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><InstagramIcon style={{ fontSize: '3rem', color: 'white' }} /></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><FacebookIcon style={{ fontSize: '3rem', color: 'white' }} /></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><YouTubeIcon style={{ fontSize: '3rem', color: 'white' }} /></a></li>
+          <li class="ms-3"><div class="link-body-emphasis" href="#"><XIcon style={{ fontSize: '3rem', color: 'white' }} /></div></li>
+          <li class="ms-3"><div class="link-body-emphasis" href="#"><InstagramIcon style={{ fontSize: '3rem', color: 'white' }} /></div></li>
+          <li class="ms-3"><div class="link-body-emphasis" href="#"><FacebookIcon style={{ fontSize: '3rem', color: 'white' }} /></div></li>
+          <li class="ms-3"><div class="link-body-emphasis" href="#"><YouTubeIcon style={{ fontSize: '3rem', color: 'white' }} /></div></li>
         </ul>
     </div>
   </footer>

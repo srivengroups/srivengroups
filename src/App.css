@@ -307,7 +307,7 @@
   background: -webkit-linear-gradient(left, #2CD8D5, #8E37D7); /* Safari 5.1-6, Chrome 10-25 */
   background: linear-gradient(to right, #2CD8D5, #8E37D7); /* Standard syntax */
   background-size: 70% 70%;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   color: transparent; /* Use 'color' instead of '-webkit-text-fill-color' */
 }
 
@@ -318,7 +318,7 @@
     background: -webkit-linear-gradient(left, #2CD8D5, #8E37D7); /* Safari 5.1-6, Chrome 10-25 */
     background: linear-gradient(to right, #2CD8D5, #8E37D7); /* Standard syntax */
     background-size: 100% 100%;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     color: transparent; /* Use 'color' instead of '-webkit-text-fill-color' */
 }
 
@@ -340,7 +340,7 @@
   background: -webkit-linear-gradient(left, #2CD8D5, #8E37D7); /* Safari 5.1-6, Chrome 10-25 */
   background: linear-gradient(to right, #2CD8D5, #8E37D7); /* Standard syntax */
   background-size: 100% 100%;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   color: transparent; 
   border: 2px solid;
   border-image: linear-gradient(to right, #2CD8D5, #8E37D7);
@@ -848,8 +848,7 @@ div.partners .sec-title h1, div.partners .sec-title p {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  justify-content: start;
-
+  justify-content: flex-start;
 }
 
 .priceDetails .pcBtns a{

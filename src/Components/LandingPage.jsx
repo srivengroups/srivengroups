@@ -2,8 +2,6 @@ import '../App.css';
 import SgNavbar from './SgNavbar';
 import MainSection from './MainSection';
 import Gallery from './OurProjects';
-import Testimonials from './Testimonial';
-// import ContactUs from './Components/ContactUs';
 import WhySG from './WhySG';
 import Footer from './Footer';
 import KnowMore from './KnowMore';

@@ -16,9 +16,9 @@ export default function SgNavbar({fixedTop}) {
           <a class="nav-link active" aria-current="page" href="/#home">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Properties
-          </a>
+          </div>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><Link to={"/properties/readyToMove"} className="dropdown-item">Ready to Move</Link></li>
             <li><Link to={"/properties/underConstruction"} className="dropdown-item">Under Construction</Link></li>

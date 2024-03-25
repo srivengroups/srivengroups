@@ -110,6 +110,11 @@
     font-size: 1rem;
     border-radius: 6px;
   }
+
+  .card-container {
+    width: 95vw;
+    margin: auto;
+  }
 }
 
 
@@ -202,7 +207,7 @@
 }
 
 .projectCard {
-   min-width: 350px;
+   min-width: 300px;
    max-width: 42%;
    margin: 10px 0;
    border: 3px solid transparent; /* Set initial border to transparent */
@@ -457,7 +462,6 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px grey;
   padding: 25px;
-  min-width: 400px;
 }
 
 .inputContainer {
@@ -802,8 +806,9 @@ div.partners .sec-title h1, div.partners .sec-title p {
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-  padding: 20px;
   flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px;
 }
 
 .propertyCard img {
@@ -840,8 +845,9 @@ div.partners .sec-title h1, div.partners .sec-title p {
 .priceDetails {
   width: 25%;
   height: min-content;
-  padding: 0 10px 0 40px;
-  width: fit-content;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .priceDetails .pcBtns{
@@ -948,7 +954,10 @@ div.propertyFilters {
   .projectCard .pcBtns {
     justify-content: center;
   }
-
+  
+  .PCcardContent {
+    width: -webkit-fill-available;
+  }
 }
 
 /*************************************************** Property Pages ************************************************************/

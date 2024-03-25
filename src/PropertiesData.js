@@ -20,7 +20,7 @@ const PropertiesData = [
     },
     {
       heading: "Unicorn(Highcliff)",
-      shortDescription: "Walk to work Condos,Next to Cessna Business Park, ORR",
+      shortDescription: `Walk to work Condos, Next to Cessna Business Park, ORR`,
       description: `
       Nestled within a boutique community spanning 1.4 acres and catering to just 196 
       families, this residential enclave is seamlessly connected to major destinations 

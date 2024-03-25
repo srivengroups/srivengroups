@@ -6,7 +6,7 @@ const PropertyCard = ({key, property}) => {
     return (
         <div className="propertyCard" key={key}>
              <div className="image">
-                <img src={Image1} style={{minHeight: "300px"}} alt="image1" />
+                <img src={Image1} style={{minHeight: "300px", width: "100%"}} alt="image1" />
              </div>
              <div className="PCcardContent">
              <div className="PCContent">

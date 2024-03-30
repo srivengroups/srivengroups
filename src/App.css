@@ -462,6 +462,7 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px grey;
   padding: 25px;
+  min-width: 400px;
 }
 
 .inputContainer {
@@ -958,6 +959,9 @@ div.propertyFilters {
   .PCcardContent {
     width: -webkit-fill-available;
   }
+  .contactSection form {
+    min-width: none;
+  }
 }
 
 /*************************************************** Property Pages ************************************************************/
@@ -1367,4 +1371,24 @@ div.propertyFilters {
   .mapAndMortgage .mortgage {
     gap: 30px;
   }
+}
+
+.lgChannelPartnerDetails .css-fvipm8 {
+  background-color: white !important;
+}
+
+.configurationProspect .css-qiwgdb.css-qiwgdb.css-qiwgdb {
+  background-color: white !important;
+}
+
+.selectProspectBudget .css-hyxlzm, .selectProspectBudget .css-1vovazs {
+  color: white !important;
+}
+
+.contactable .css-hyxlzm {
+  color: white !important;
+}
+
+.termsAndConditions .css-vubbuv {
+  color: white !important;
 }

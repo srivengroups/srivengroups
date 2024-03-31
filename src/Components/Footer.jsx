@@ -19,6 +19,7 @@ const Footer = () => {
           <li class="nav-item mb-2"><a href="/properties/readyToMove" class="nav-link p-0">Properties</a></li>
           <li class="nav-item mb-2"><a href="/channel-partners" class="nav-link p-0">Channel Partners</a></li>
           <li class="nav-item mb-2"><a href="/#propertyListings" class="nav-link p-0">Property Listings</a></li>
+          <li class="nav-item mb-2"><a href="/privacy-policy" class="nav-link p-0">Privacy Policy</a></li>
         </ul>
       </div>
 

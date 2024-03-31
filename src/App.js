@@ -11,6 +11,7 @@ import Properties from './Components/Properties';
 import PropertyPage from './Components/PropertyPage';
 import LeadRegistration from './Components/LeadRegistration';
 import PropertiesData from './PropertiesData';
+import PrivacyPolicy from './Components/PrivacyPolicy';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/lead-registration" element={<LeadRegistration />} />
         <Route path='/properties/:status' element={<Properties properties={PropertiesData} />} />
         <Route path='/properties/page/:propertyName' element={<PropertyPage properties={PropertiesData} />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
       </Routes>
     </Router>
   );

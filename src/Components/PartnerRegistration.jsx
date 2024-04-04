@@ -2,20 +2,46 @@ import React from 'react';
 import SgNavbar from '../Components/SgNavbar';
 import Footer from './Footer';
 
-const PartnerRegistration = ({channelPartner, noHeaderFooter}) => {
+const PartnerRegistration = ({noHeaderFooter, setPartnerDetails, leadRegistration}) => {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    const partnerDetails = {};
+    formData.forEach((value, key) => {
+      partnerDetails[key] = value;
+    });
+
+    if(leadRegistration) {
+      partnerDetails.comments = formData.get('comments');
+      setPartnerDetails(prevPartnerDetails => partnerDetails);
+      console.log(partnerDetails);
+    }else {
+       fetch("/", {
+         method: "POST",
+         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+         body: new URLSearchParams(formData).toString(),
+       })
+         .then(() => console.log("Form successfully submitted"))
+         .catch((error) => alert(error));
+      };
+    }
+  
     return (
         <div className="partnerRegistration">
               {!noHeaderFooter && <SgNavbar fixedTop={false} />}
             <div className="container partnerRegistrationContainer">
-      <h2>{channelPartner ? "Channel Partner Registration": "Lead Registration" }</h2>
-      <form>
+      <h2>Channel Partner Registration</h2>
+      <form name='channel-partner-registration' onSubmit={handleSubmit} >
         <div className="form-group">
           <label htmlFor="partnerName">Channel Partner's Name *</label>
           <input type="text" id="partnerName" name="partnerName" required />
         </div>
         <div className="form-group">
-          <label htmlFor={channelPartner?"companyName": "customerName"}>{channelPartner?"Channel Partner's Company/Business Name *": "Customer’s Name *"}</label>
-          <input type="text" id={channelPartner?"companyName": "customerName"} name={channelPartner?"companyName": "customerName"} required />
+          <label htmlFor="companyName">Channel Partner's Company/Business Name *</label>
+          <input type="text" id="companyName" name="companyName" required />
         </div>
         <div className="form-group">
           <label htmlFor="executiveName">Channel Partner's Executive/Manager's Name *</label>

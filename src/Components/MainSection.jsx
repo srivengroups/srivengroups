@@ -9,7 +9,7 @@ export default function MainSection() {
          <h1>
             We Help You Find Your Perfect Homes. 
          </h1>
-         <form class="FormSection aos-init aos-animate" action="hero-capture.php" method="post">
+         <form class="FormSection aos-init aos-animate" name="user-name-and-email" method="POST" netlify>
         <input class="inputForm" type="text" name="name" id="name" placeholder="Name" />
         <input class="inputForm" type="email" name="email" id="email" placeholder="Email" />
         <input class="buttonForm" type="submit" value="Submit" />

@@ -16,7 +16,7 @@ import FormGroup from '@mui/material/FormGroup';
 import SgNavbar from "./SgNavbar";
 import Footer from "./Footer";
 
-const PersonalDetails = () => {
+const PersonalDetails = ({handleNextClick, handlePrevClick}) => {
     // State variables to store form data
     const [formData, setFormData] = useState({
       firstName: '',
@@ -28,26 +28,16 @@ const PersonalDetails = () => {
     // Function to handle form input changes
     const handleChange = (e) => {
       const { name, value } = e.target;
-      setFormData({ ...formData, [name]: value });
-    };
-  
-    // Function to handle form submission
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      // Validate form fields
-      if (formData.firstName && formData.lastName && formData.phoneNumber && formData.emailAddress) {
-        // Form data is valid, perform further actions (e.g., submit to server)
-        console.log('Form submitted:', formData);
-      } else {
-        // Form data is incomplete, display an error message or handle as needed
-        alert('Please fill in all required fields.');
-      }
+      setFormData(prevFormData => ({
+        ...prevFormData,
+        [name]: value
+      }));
     };
   
     return (
         <div className="personalDetails">
         <h4>Please Fill in Leads Personal Details</h4>
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className="formElements">
           <label htmlFor="firstName">First Name:</label>
           <input
@@ -94,12 +84,15 @@ const PersonalDetails = () => {
         </div>
         
       </form>
+      <div className="stepMovers">
+             <button className="next" onClick={()=>handleNextClick({personalDetails: formData})}>Next</button>
+      </div>
       </div>
     );
   };
 
 
-  const OffCanvas = () => {
+  const OffCanvas = ({partnerDetails, setPartnerDetails, leadRegistration}) => {
     return (
         <div>
             <a class="btn" style={{backgroundColor: "#43A3D5", color: "white"}} data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -111,7 +104,7 @@ const PersonalDetails = () => {
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <PartnerRegistration channelPartner={true} noHeaderFooter={true} />
+    <PartnerRegistration channelPartner={true} leadRegistration={leadRegistration} partnerDetails={partnerDetails} setPartnerDetails={setPartnerDetails}  noHeaderFooter={true} />
   </div>
 </div>
         </div>
@@ -121,11 +114,15 @@ const PersonalDetails = () => {
 
 
 
-function ChannelPartnerDetails() {
-  const [age, setAge] = React.useState('');
+function ChannelPartnerDetails({handleNextClick, handlePrevClick}) {
+  const [partnerDetails, setPartnerDetails] = React.useState('');
+  const [availablePartners, setAvailablePartners] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setAvailablePartners(event.target.value);
+    if(event.target.value) {
+      setPartnerDetails(prevPartnerDetails => event.target.value);
+    }
   };
 
   return (
@@ -136,10 +133,10 @@ function ChannelPartnerDetails() {
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
-          value={age}
+          value={availablePartners}
           onChange={handleChange}
           autoWidth
-          label="Age"
+          label="Channel Partner"
         >
           <MenuItem value="">
             <em>None</em>
@@ -149,7 +146,11 @@ function ChannelPartnerDetails() {
           <MenuItem value={22}>Twenty one and a half</MenuItem>
         </Select>
       </FormControl>
-      <OffCanvas />
+      <OffCanvas partnerDetails={partnerDetails} leadRegistration={true} setPartnerDetails={setPartnerDetails} />
+      <div className="stepMovers">
+             <button className="prev" onClick={handlePrevClick}>Prev</button>
+             <button className="next" onClick={()=>handleNextClick({channelPartnerDetails: partnerDetails})}>Next</button>
+      </div>
     </div>
   );
 }
@@ -178,8 +179,7 @@ const names = [
   'Kelly Snyder',
 ];
 
-function SelectProspects() {
-  const [personName, setPersonName] = React.useState([]);
+function SelectProspects({personName, setPersonName}) {
 
   const handleChange = (event) => {
     const {
@@ -218,26 +218,36 @@ function SelectProspects() {
 }
 
 
-const ConfigurationProspect = () => {
-
+const ConfigurationProspect = ({handleNextClick, handlePrevClick}) => {
+  const [personName, setPersonName] = React.useState([]);
     return(
          <div className="configurationProspect">
             <h3>
                What configuration Prospect is Interested In?
             </h3>
-            <SelectProspects />
+            <SelectProspects personName={personName} setPersonName={setPersonName} />
+            <div className="stepMovers">
+             <button className="prev" onClick={handlePrevClick}>Prev</button>
+             <button className="next" onClick={()=>handleNextClick({configurationProspect: personName})}>Next</button>
+           </div>
          </div>
     );
 }
 
 
-function RadioButtonsGroup() {
+function RadioButtonsGroup({range, setRange}) {
+
+  const handleChange = (event) => {
+    setRange(event.target.value);
+  };
+
   return (
     <FormControl>
       <FormLabel id="demo-radio-buttons-group-label">Range</FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="1.5Cr - 2Cr"
+        value={range}
+        onChange={handleChange}
         name="radio-buttons-group"
       >
         <FormControlLabel value="90L - 1Cr" control={<Radio />} label="90L - 1Cr" />
@@ -250,17 +260,28 @@ function RadioButtonsGroup() {
 }
 
 
-const SelectProspectBudget = () => {
+const SelectProspectBudget = ({handleNextClick, handlePrevClick}) => {
 
+  const [range, setRange] = useState("1.5Cr - 2Cr");
     return (
         <div className="selectProspectBudget">
           <h3>What is the budget of your prospect?</h3>
-          <RadioButtonsGroup />
+          <RadioButtonsGroup range={range} setRange={setRange} />
+          <div className="stepMovers">
+             <button className="prev" onClick={handlePrevClick}>Prev</button>
+             <button className="next" onClick={()=>handleNextClick({selectProspectBudget: range})}>Next</button>
+      </div>
         </div>
     )
 }
 
-const Contactable = () => {
+const Contactable = ({handleNextClick, handlePrevClick}) => {
+
+  const [contactable, setContactable] = useState('Yes');
+
+  const handleChange = (event) => {
+    setContactable(event.target.value);
+  };
 
     return(
         <div className="contactable">
@@ -268,20 +289,30 @@ const Contactable = () => {
             <FormControl>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="Yes"
+        value={contactable}
+        onChange={handleChange}
         name="radio-buttons-group"
       >
         <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
         <FormControlLabel value="No" control={<Radio />} label="No" />
       </RadioGroup>
     </FormControl>
-
+    <div className="stepMovers">
+             <button className="prev" onClick={handlePrevClick}>Prev</button>
+             <button className="next" onClick={()=>handleNextClick({contactable: contactable})}>Next</button>
+      </div>
         </div>
     )
 }
 
 
-const TermsAndConditions = () => {
+const TermsAndConditions = ({handleNextClick, handlePrevClick}) => {
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = (event) => {
+    setIsChecked(event.target.checked);
+  };
 
     const text =  `I Accept that Power of Flow Realty LLP is a mandate 
     service provider that facilitates sales transactions 
@@ -295,8 +326,13 @@ const TermsAndConditions = () => {
         <div className="termsAndConditions">
             <h3>Please Accept Terms and conditions</h3>
             <FormGroup>
-               <FormControlLabel required control={<Checkbox />} label={text} />
+               <FormControlLabel required
+                control={<Checkbox checked={isChecked} onChange={handleChange} />} label={text} />
             </FormGroup>
+            <div className="stepMovers">
+             <button className="prev" onClick={handlePrevClick}>Prev</button>
+             <button className="next" onClick={()=>handleNextClick({termsAndConditions: isChecked})}>Submit</button>
+      </div>
         </div>
     )
 }
@@ -307,13 +343,68 @@ const LeadRegistration = () => {
     const defaultStep = 1;
 
     const [currStep, setCurrStep] = useState(defaultStep);
+    // const [PropertyValue, setPropertyValue] = useState('');
+    const [leadRegistration, setLeadRegistration] = useState({
+      personalDetails: "",
+      channelPartnerDetails: "",
+      configurationProspect: "",
+      selectProspectBudget: "",
+      contactable: "Yes",
+      termsAndConditions: "true",
+    });
 
-    const handleNextClick = () => {
-        setCurrStep(currStep + 1);
+
+    const handleNextClick = (PropertyValue) => {
+         console.log(PropertyValue);
+         setLeadRegistration(prevLeadRegistration => ({...prevLeadRegistration, ...PropertyValue}));
+         console.log(leadRegistration);
+          switch (currStep) {
+            case 6:
+              if(!PropertyValue.termsAndConditions){
+                alert("Please accept the terms and conditions to complete the registration!");
+              } else {
+                submitRegistration();
+              }
+              break;
+            default:
+              if(PropertyValue){
+                setCurrStep(currStep + 1);
+              } else {
+                alert('Please fill in all required fields.');
+              }
+              break;
+          }
+          console.log(leadRegistration);
+      
+  }
+
+    const submitRegistration = () => {
+      const userData = {
+        firstName: leadRegistration.personalDetails.firstName,
+        lastName: leadRegistration.personalDetails.lastName,
+        phoneNumber: leadRegistration.personalDetails.phoneNumber,
+        emailAddress: leadRegistration.personalDetails.emailAddress,
+        channelPartnerDetails: leadRegistration.channelPartnerDetails,
+        configurationProspect: leadRegistration.configurationProspect,
+        selectProspectBudget: leadRegistration.selectProspectBudget,
+        contactable: leadRegistration.contactable,
+        termsAndConditions: leadRegistration.termsAndConditions,
+      };
+      console.log(userData);
+      
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(userData).toString(),
+      })
+        .then(() => alert("Thank you for registering with us!"))
+        .catch((error) => alert(error));
     }
+
     const handlePrevClick = () => {
         setCurrStep(currStep - 1);
     }
+
     return (
         <div className="leadregisterParent">
         <SgNavbar fixedTop={false}/>
@@ -321,16 +412,12 @@ const LeadRegistration = () => {
         <div className="leadRegistration">
             <h1>Lead Registration</h1>
             
-            {currStep === 1 && <PersonalDetails />}
-            {currStep === 2 && <ChannelPartnerDetails />}
-            {currStep === 3 && <ConfigurationProspect />}
-            {currStep === 4 && <SelectProspectBudget /> }
-            {currStep === 5 && <Contactable /> }
-            {currStep === 6 && <TermsAndConditions /> }
-            <div className="stepMovers">
-             {currStep !== defaultStep && <button className="prev" onClick={handlePrevClick}>Prev</button>}
-             <button className="next" onClick={handleNextClick}>Next</button>
-            </div>
+            {currStep === 1 && <PersonalDetails handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} />}
+            {currStep === 2 && <ChannelPartnerDetails handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} />}
+            {currStep === 3 && <ConfigurationProspect handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} />}
+            {currStep === 4 && <SelectProspectBudget handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} /> }
+            {currStep === 5 && <Contactable handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} /> }
+            {currStep === 6 && <TermsAndConditions handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} /> }
         </div>
         <Footer />
         </div>

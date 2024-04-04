@@ -30,6 +30,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 500;
+  padding: 0 20px !important;
 }
 
 .sgNavbar .dropdown a {
@@ -42,7 +44,6 @@
 .sgNavbar .nav-link a {
   /* color: #eee; */
   box-shadow: 3px 3px 3px 3px grey;
-
 }
 
 
@@ -119,9 +120,11 @@
 
 
 .mainSection h1{ 
-  max-width: 60%;
+  max-width: 100%;
+  padding: 0 10px;
   font-size: 2.5rem;
   color: #eee;
+  width: fit-content;
 }
 
 @keyframes animateBackground {
@@ -520,25 +523,26 @@
 .aboutSection {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background: linear-gradient(125deg, #c0eed0 0%, #9696b4 40%, #bfb0be 70%, #e2e9d1 100%), linear-gradient(55deg, #d3d7f8 0%, #e9d8f1 100%), linear-gradient(300deg, #eeebdd 0%, #dfe1f5 100%), radial-gradient(135% 215% at 115% 40%, #b4b2b2 0%, #9a9999 40%, #999e8f calc(40% + 1px), #9ba190 60%, #eae2c9 calc(60% + 1px), #f0e4c3 80%, #ECEFD8 calc(80% + 1px), #ECEFD8 100%), linear-gradient(125deg, #5f616e 0%, #404251 40%, #423f47 calc(40% + 1px), #595360 70%, #926f7b calc(70% + 1px), #a8a1a3 88%, #d4b39b calc(88% + 1px), #c7a892 100%);
   background-blend-mode: overlay, screen, overlay, overlay, normal;
   background-size: 100% 100%;
-  flex-wrap: wrap;
   row-gap: 20px;
   padding: 50px 10px 50px 10px;
+  align-items: flex-start;
+  height: 500px;
 }
 
 
 .aboutContent p {
-  max-width: 600px;
   text-align: left;
   background: linear-gradient(90.00deg, rgb(24, 108, 155), rgb(22, 56, 94), rgb(67, 163, 213));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  max-width: 600px;
 }
 .aboutMain {
   text-transform: uppercase;
@@ -551,23 +555,23 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-wrap: wrap;
 }
 
-.imagesSection {
-  display: flex;
-  column-gap: 10px;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+.imageSection {
+  position: relative;
+  margin: 0 180px 0 10px;
 }
 
-.imageOne {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #16385E;
-  height: 300px;
-  width: 220px;
+.imageSection .image1 {
+  box-shadow: 0 4px 8px black;
+}
+
+.imageSection .image2 {
+  box-shadow: 0 4px 8px black;
+  position: absolute;
+  left: 40%;
+  top: 80%;
 }
 
 .imageOne h1 {
@@ -608,6 +612,15 @@
 .imgTwo h1 {
   font-size: 24px;
   color: white;
+}
+
+.aboutUsLogos {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUsLogos .pair {
+  display: flex;
 }
 
 
@@ -687,21 +700,36 @@ div.partners .sec-title h1, div.partners .sec-title p {
   flex-wrap: wrap;
   gap: 50px;
   column-count: 2;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .services .service {
   max-height: 450px;
-  max-width: 36%;
+  max-width: 46%;
   min-width: 300px;
-  box-shadow: 0 4px 8px black;
+  box-shadow: 0 1px 2px black;
   padding: 30px;
   background: linear-gradient(125deg, #c0eed0 0%, #9696b4 40%, #bfb0be 70%, #e2e9d1 100%), linear-gradient(55deg, #d3d7f8 0%, #e9d8f1 100%), linear-gradient(300deg, #eeebdd 0%, #dfe1f5 100%), radial-gradient(135% 215% at 115% 40%, #b4b2b2 0%, #9a9999 40%, #999e8f calc(40% + 1px), #9ba190 60%, #eae2c9 calc(60% + 1px), #f0e4c3 80%, #ECEFD8 calc(80% + 1px), #ECEFD8 100%), linear-gradient(125deg, #5f616e 0%, #404251 40%, #423f47 calc(40% + 1px), #595360 70%, #926f7b calc(70% + 1px), #a8a1a3 88%, #d4b39b calc(88% + 1px), #c7a892 100%);
   background-blend-mode: overlay, screen, overlay, overlay, normal;
   background-size: 150% 150%;
+  border-radius: 20px;
+  text-align: left !important;
 }
 
-.services .service h3, .services .service p {
+.services .serviceMetaData {
+  border: 2px solid #E62249;
+  border-radius: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  /* border-image: linear-gradient(to right, #186C9B, #43A3D5, #16385E, #E62249) 1; */
+}
+
+/* .services .serviceHeading {
+  
+} */
+
+.services .service h3, .services .service p, .services h2{
   background: linear-gradient(90.00deg, rgb(24, 108, 155), rgb(22, 56, 94), rgb(67, 163, 213));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -934,6 +962,10 @@ div.propertyFilters {
  }
 
 @media screen and (max-width: 992px) {
+  .sgNavbar .nav-link {
+    padding: 10px 0 !important;
+    text-align: left;
+  }
   .propertyCard {
     width: min-content;
     margin: 0 10px;
@@ -962,6 +994,20 @@ div.propertyFilters {
   .contactSection form {
     min-width: none;
   }
+
+  .aboutSection {
+    height: 100%;
+    flex-wrap: wrap;
+  }
+ .imageSection {
+  margin-bottom: 180px;
+  margin-left: 0;
+ }
+
+ .privacyPolicy {
+  padding: 50px 15px !important;
+ }
+  
 }
 
 /*************************************************** Property Pages ************************************************************/
@@ -1007,7 +1053,7 @@ div.propertyFilters {
   flex-direction: column;
 }
 
-.leadRegistration .stepMovers {
+.stepMovers {
   justify-content: center;
   display: flex;
   width: 100%;
@@ -1022,7 +1068,7 @@ div.propertyFilters {
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.7);
 }
 
-.leadRegistration .next {
+.stepMovers .next {
   height: 45px;
   border-radius: 7px;
   border: none;
@@ -1034,7 +1080,7 @@ div.propertyFilters {
   min-width: 80px !important;
 }
 
-.leadRegistration .prev {
+.stepMovers .prev {
   height: 45px;
   min-width: 80px !important;
   border-radius: 7px;
@@ -1391,4 +1437,23 @@ div.propertyFilters {
 
 .termsAndConditions .css-vubbuv {
   color: white !important;
+}
+
+/***************************************************** Privacy Policy ************************************************************/
+.privacyPolicy {
+  text-align: justify;
+  margin: auto;
+  padding: 50px;
+  background: linear-gradient(125deg, #a4e5bb 0%, #7575b1 40%, #c29fbf 70%, #d9eea8 100%), linear-gradient(55deg, #abb3f9 0%, #ddb9ee 100%), linear-gradient(300deg, #eadca5 0%, #b6bbf4 100%), radial-gradient(135% 215% at 115% 40%, #b99191 0%, #a18787 40%, #909d76 calc(40% + 1px), #93a573 60%, #ecd89b calc(60% + 1px), #f0deae 80%, #dfe8a6 calc(80% + 1px), #e8f1ae 100%), linear-gradient(125deg, #4d5272 0%, #404251 40%, #423a51 calc(40% + 1px), #4e405e 70%, #916474 calc(70% + 1px), #ad8b94 88%, #d7ad8e calc(88% + 1px), #c6a085 100%);
+  background-blend-mode: overlay, screen, overlay, overlay, normal;
+  background-size: 350% 200%;
+}
+
+.privacyPolicy h5 {
+  margin: 30px 0 10px;
+}
+
+
+.privacyPolicy h1, .privacyPolicy h5 {
+  color: #E62249;
 }

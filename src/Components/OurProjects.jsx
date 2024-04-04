@@ -30,7 +30,7 @@ const ProjectCard = ({ image, details }) => {
            <h6>{details.propertyStatus === "underConstruction"? "under construction": details.propertyStatus === "readyToMove"? "Ready to Move": "Sold Out" }</h6>
            {details.minPrice? <h4>Starting From <span style={{color: "#E62249"}}>{details.minPrice}</span></h4>: <h4 style={{color: "#E62249"}}>Price Unveiling Soon</h4>}
            <div className="pcBtns">
-                    <Link to={`/properties/page/Apartment Name`} className="btn">View Property</Link>
+                    <Link to={`/properties/page/${details.heading}`} className="btn">View Property</Link>
             </div>
         </div>
       </div>

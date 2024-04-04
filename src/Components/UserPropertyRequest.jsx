@@ -24,11 +24,7 @@ const UserPropertyRequest = () => {
     window.open(url, "_blank");
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    // For example, you can send form data to a server
-  };
+
 
 
 
@@ -41,7 +37,7 @@ const UserPropertyRequest = () => {
         <p>Email: info@srivengroups.com</p>
       </div>
 
-    <form onSubmit={handleSubmit} className="userPropertyRequestForm">
+    <form name="user-property-request" method="POST" className="userPropertyRequestForm" netlify>
       <div className="field">
         <label htmlFor="name">Name:</label>
         <input

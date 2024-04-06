@@ -47,6 +47,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </head>
   <body>
+    <form class="FormSection" name="user-name-and-email" method="post" netlify netlify-honeypot="bot-field" hidden>
+     <input class="inputForm" type="text" name="name" id="name" placeholder="Name" />
+     <input class="inputForm" type="email" name="email" id="email" placeholder="Email" />
+     <input class="buttonForm" type="submit" value="Submit" />
+      </form>
     <div id="root"></div>
     <!--
       This HTML file is a template.

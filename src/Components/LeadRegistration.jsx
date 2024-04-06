@@ -391,11 +391,17 @@ const LeadRegistration = () => {
         termsAndConditions: leadRegistration.termsAndConditions,
       };
       console.log(userData);
+
+      const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+      }
       
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(userData).toString(),
+        body: encode({"form-name": "lead-registration",...userData}),
       })
         .then(() => alert("Thank you for registering with us!"))
         .catch((error) => alert(error));

@@ -9,6 +9,7 @@ export default function MainSection() {
          <h1>
             We Help You Find Your Perfect Homes. 
          </h1>
+         <h6>"Unlock Your Dream Home: Explore Endless Possibilities with Sriven Groups.<br /> Welcome to a World of Exceptional Properties and Personalized Service."</h6>
          <form class="FormSection" name="user-name-and-email" method="POST">
          <input type="hidden" name="form-name" value="user-name-and-email" />
         <input class="inputForm" type="text" name="name" id="name" placeholder="Name" />

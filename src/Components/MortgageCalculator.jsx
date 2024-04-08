@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Slider from '@mui/material/Slider';
 
 const MortgageCalculator = () => {
-  const [homePrice, setHomePrice] = useState(200000); // Default value: ₹200,000
+  const [homePrice, setHomePrice] = useState(15000000); // Default value: ₹200,000
   const [downPaymentPercentage, setDownPaymentPercentage] = useState(20); // Default value: 20%
   const [interestRate, setInterestRate] = useState(4); // Default value: 4%
   const [loanTerm, setLoanTerm] = useState(10); // Default value: 10 years
@@ -70,8 +70,8 @@ const MortgageCalculator = () => {
         <Slider
           value={homePrice}
           onChange={handleHomePriceChange}
-          min={100000}
-          max={1000000}
+          min={10000000}
+          max={30000000}
           step={1000}
           valueLabelDisplay="auto"
         />

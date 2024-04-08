@@ -14,18 +14,24 @@ const PartnerRegistration = ({noHeaderFooter, setPartnerDetails, leadRegistratio
       partnerDetails[key] = value;
     });
 
+    const encode = (data) => {
+      return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&");
+    }
+
     if(leadRegistration) {
       partnerDetails.comments = formData.get('comments');
       setPartnerDetails(prevPartnerDetails => partnerDetails);
       console.log(partnerDetails);
     }else {
-       fetch("/", {
-         method: "POST",
-         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-         body: new URLSearchParams(formData).toString(),
-       })
-         .then(() => console.log("Form successfully submitted"))
-         .catch((error) => alert(error));
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "channel-partner-registration",...partnerDetails })
+      })
+       .then(() => alert("Successfully submitted!"))
+       .catch(error => alert(error));
       };
     }
   

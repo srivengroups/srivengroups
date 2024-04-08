@@ -129,7 +129,7 @@ function ChannelPartnerDetails({handleNextClick, handlePrevClick}) {
     <div className="lgChannelPartnerDetails">
       <h3>Please Select Channel Partner</h3>
       <FormControl sx={{ m: 1, minWidth: 80 }}>
-        <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
+        <InputLabel id="demo-simple-select-autowidth-label">Select Channel Partner</InputLabel>
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"

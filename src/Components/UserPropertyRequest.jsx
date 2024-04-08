@@ -24,6 +24,22 @@ const UserPropertyRequest = () => {
     window.open(url, "_blank");
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
+  const handleSubmit = () => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "user-property-request",...formData })
+    })
+     .then(() => alert("Successfully submitted!"))
+     .catch(error => alert(error));
+  }
+
 
 
 
@@ -37,7 +53,8 @@ const UserPropertyRequest = () => {
         <p>Email: info@srivengroups.com</p>
       </div>
 
-    <form name="user-property-request" method="POST" className="userPropertyRequestForm" netlify>
+    <form name="user-property-request" method="POST" className="userPropertyRequestForm">
+    
       <div className="field">
         <label htmlFor="name">Name:</label>
         <input
@@ -77,7 +94,7 @@ const UserPropertyRequest = () => {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" onClick={handleSubmit}>Submit</button>
     </form>
      <div className="btns">
         <button type="button"  onClick={handleCallNow}>Call Now</button>

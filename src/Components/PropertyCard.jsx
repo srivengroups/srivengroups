@@ -1,12 +1,11 @@
 import React from "react";
-import Image1 from "../images/apartmentImg1.jpg";
 import { Link } from "react-router-dom";
 
 const PropertyCard = ({key, property}) => {
     return (
         <div className="propertyCard" key={key}>
              <div className="image">
-                <img src={Image1} style={{minHeight: "300px", width: "100%"}} alt="image1" />
+                <img src={property.imageUrl} style={{minHeight: "300px", width: "100%"}} alt="image1" />
              </div>
              <div className="PCcardContent">
              <div className="PCContent">
@@ -28,7 +27,7 @@ const PropertyCard = ({key, property}) => {
                 <div className="pcBtns">
                     <Link to={"/lead-registration"} className="btn">Lead Registration</Link>
                     {/* <a href="#" class="btn btn-primary">Lead Registration</a> */}
-                    <Link to={`/properties/page/${property.heading}`} className="btn">View Property</Link>
+                   <Link to={`/properties/page/${property.heading}`} className="btn">View Property</Link>
                     {/* <a href="#" class="btn btn-primary">View Property</a> */}
                 </div>
              </div>

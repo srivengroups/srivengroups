@@ -28,25 +28,26 @@ const Services = () => {
                      </div>
                   </div>
                   <div className='service'>
-                  <h3>Service2</h3>
-                     <p>Es un hecho establecido hace demasiado tiempo
-                      que un lector se distraerá con el contenido del texto de un 
-                      sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una
-                      distribución más o menos normal de las letras, al contrario de usar textos como por </p>
+                  <h3>APARTMENT SHOWCASE</h3>
+                     <p>Looking to sell your apartment? We specialize in 
+                     connecting you with interested buyers and organizing 
+                     on-site visits to showcase your property's charm. Trust us 
+                     to present your apartment to a global audience and make your sale a success. </p>
                   </div>
                   <div className='service'>
-                  <h3>Service3</h3>
-                     <p>Es un hecho establecido hace demasiado tiempo
-                      que un lector se distraerá con el contenido del texto de un 
-                      sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una
-                      distribución más o menos normal de las letras, al contrario de usar textos como por </p>
+                  <h3>LAND PLOTS</h3>
+                     <p>We specialize in facilitating the discovery of 
+                     potential buyers for your property. Additionally, we meticulously coordinate site visits for interested parties, 
+                     ensuring they have the opportunity to 
+                     fully experience and appreciate the unique features of your property. </p>
                   </div>
                   <div className='service'>
-                  <h3>Service4</h3>
-                     <p>Es un hecho establecido hace demasiado tiempo
-                      que un lector se distraerá con el contenido del texto de un 
-                      sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una
-                      distribución más o menos normal de las letras, al contrario de usar textos como por </p>
+                  <h3>VILLAS EXPOSURE</h3>
+                     <p>Interested in selling your villa? We 
+                     excel in linking you with potential buyers keen on your 
+                     property. Our team not only finds the right buyer but also organizes site visits,
+                      allowing interested 
+                      parties to experience your stunning villa firsthand. Trust us to showcase your villa globally. </p>
                   </div>
              </div>
          </section>

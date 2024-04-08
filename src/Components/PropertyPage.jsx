@@ -1,11 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import SgNavbar from "./SgNavbar";
-import Image1 from "../images/apartmentImg1.jpg";
 import Footer from "./Footer";
-import MapView from "./MapView";
 import MortgageCalculator from "./MortgageCalculator";
 import UserPropertyRequest from "./UserPropertyRequest";
+import DoneIcon from '@mui/icons-material/Done';
 
 const PropertyPage = ({ properties }) => {
   
@@ -28,7 +27,7 @@ const PropertyPage = ({ properties }) => {
               </div>
               <div className="sideRight">
                 <h5>{property.propertyStatus === "underConstruction"? "under construction": property.propertyStatus === "readyToMove"? "Ready to Move": "Sold Out" }</h5>
-                <h5>{property.priceDetails}</h5>
+                <h5>{property.priceDetails? property.priceDetails : "Price: Unveiling soon"}</h5>
               </div>
         </div>
       </div>
@@ -37,7 +36,7 @@ const PropertyPage = ({ properties }) => {
         <div className="nonMapAndMortgage">
           <div className="propertyPageMetaData">
             <div className="pictureDetails">
-              <img src={Image1} height={"300px"} alt="image3" />
+              <img src={property.imageUrl} height={"300px"} alt="image3" />
             </div>
           </div>
 
@@ -62,7 +61,7 @@ const PropertyPage = ({ properties }) => {
                 <p>Unit Size</p>
                 <div>
                 <img width="40" height="40" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/FA5252/external-Size-arrows-tanah-basah-basic-outline-tanah-basah-2.png" alt="external-Size-arrows-tanah-basah-basic-outline-tanah-basah-2"/>
-                  <p>value</p>
+                  <p>{property.unitSize}</p>
                 </div>
               </div>
               <div>
@@ -81,89 +80,47 @@ const PropertyPage = ({ properties }) => {
               <h5>Additional Details</h5>
               <div>
                 <h6>Structure</h6>
-                <p>G+3</p>
+                <p>{property.structure}</p>
               </div>
               <div>
                 <h6>Rera Number</h6>
-                <p>PRM/KA/RERA/1251/310/PR/180507/001631</p>
+                <p>{property.reraNumber}</p>
               </div>
             </div>
             <div className="Features">
               <h5>Features</h5>
               <div className="featureGrid">
-                <div className="feature">
-                  tick
-                  <p>feature1</p>
-                </div>
-                <div className="feature">
-                  tick
-                  <p>feature1</p>
-                </div>
-                <div className="feature">
-                  tick
-                  <p>feature1</p>
-                </div>
-                <div className="feature">
-                  tick
-                  <p>feature1</p>
-                </div>
-                <div className="feature">
-                  tick
-                  <p>feature1</p>
-                </div>
-                <div className="feature">
-                  tick
-                  <p>feature1</p>
-                </div>
-                <div className="feature">
-                  tick
-                  <p>feature1</p>
-                </div>
-                <div className="feature">
-                  tick
-                  <p>feature1</p>
-                </div>
+                {
+                  property.features.split(',').map((feature) => {
+                    return (
+                      <div className="feature">
+                        <DoneIcon style={{color: "#E62249"}} />
+                        <p>{feature}</p>
+                      </div>
+                    );
+                  })
+                }
               </div>
             </div>
 
             <div className="floorPlans">
               <h5>Floor Plans</h5>
               <div className="planGrid">
-                <div className="plan">
-                  <h6>1BHK</h6>
-                  <div>
-                    <p>1 Bedroom</p>
-                    <p>55 Lacs</p>
-                  </div>
-                </div>
-                <div className="plan">
-                  <h6>1BHK</h6>
-                  <div>
-                    <p>1 Bedroom</p>
-                    <p>55 Lacs</p>
-                  </div>
-                </div>
-                <div className="plan">
-                  <h6>1BHK</h6>
-                  <div>
-                    <p>1 Bedroom</p>
-                    <p>55 Lacs</p>
-                  </div>
-                </div>
-                <div className="plan">
-                  <h6>1BHK</h6>
-                  <div>
-                    <p>1 Bedroom</p>
-                    <p>55 Lacs</p>
-                  </div>
-                </div>
+              {property.floorPlans.split(",").map((floorPlan, id) => (
+  <div className="plan" key={id}>
+    <h6>{floorPlan}</h6>
+    <div>
+      <p>{property.floorPrices.split(',')[id]}</p>
+    </div>
+  </div>
+))}
               </div>
             </div>
           </div>
         </div>
 
         <div className="mapAndMortgage">
-            <MapView propertyPage={true}/>
+            <iframe title="sumadhuraSushantham" src={property.mapUrl} min-width="800" height="400" style={{border: "0", boxShadow: "0 2px 4px grey"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <MortgageCalculator />
         </div>
         </div>

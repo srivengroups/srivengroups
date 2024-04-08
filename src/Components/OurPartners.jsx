@@ -1,10 +1,8 @@
 import React from 'react';
-import Logo1 from '../images/web logo (1).png';
-import Logo2 from '../images/web logo (1).png';
-import Logo3 from '../images/web logo (1).png';
-import Logo4 from '../images/web logo (1).png';
-import Logo5 from '../images/web logo (1).png';
-import Logo6 from '../images/web logo (1).png';
+import GrcInfraLogo from '../images/grc-infra-logo.jpg';
+import HwBuildTechLogo from '../images/hw-buildtech-logo.png';
+import SipaniLogo from '../images/sipani-Logo.png';
+import SurakshaGroupLogo from '../images/suraksha-group-logo.png';
 
 const OurPartners = () => {
     return (
@@ -16,22 +14,16 @@ const OurPartners = () => {
                     <section className="ourClientSection">
                         <div className="clientScroll-container">
                             <div className="logo">
-                                <img src={Logo1} alt="Logo 1" />
+                                <img src={GrcInfraLogo} alt="Logo 1" />
                             </div>
                             <div className="logo">
-                                <img src={Logo2} alt="Logo 2" />
+                                <img src={HwBuildTechLogo} alt="Logo 2" />
                             </div>
                             <div className="logo">
-                                <img src={Logo3} alt="Logo 3" />
+                                <img src={SipaniLogo} alt="Logo 3" />
                             </div>
                             <div className="logo">
-                                <img src={Logo4} alt="Logo 4" />
-                            </div>
-                            <div className="logo">
-                                <img src={Logo5} alt="Logo 5" />
-                            </div>
-                            <div className="logo">
-                                <img src={Logo6} alt="Logo 6" />
+                                <img src={SurakshaGroupLogo} alt="Logo 4" />
                             </div>
                         </div>
                     </section>

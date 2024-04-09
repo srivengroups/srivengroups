@@ -2,7 +2,7 @@ import React from 'react';
 import SgNavbar from '../Components/SgNavbar';
 import Footer from './Footer';
 
-const PartnerRegistration = ({noHeaderFooter, setPartnerDetails, leadRegistration}) => {
+const PartnerRegistration = ({noHeaderFooter, setPartnerDetails, leadRegistration, handleNextClick}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,6 +24,8 @@ const PartnerRegistration = ({noHeaderFooter, setPartnerDetails, leadRegistratio
       partnerDetails.comments = formData.get('comments');
       setPartnerDetails(prevPartnerDetails => partnerDetails);
       console.log(partnerDetails);
+      handleNextClick(partnerDetails)
+      alert("successFully Submitted! You can proceed next steps");
     }else {
       fetch("/", {
         method: "POST",

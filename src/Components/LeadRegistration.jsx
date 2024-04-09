@@ -92,7 +92,7 @@ const PersonalDetails = ({handleNextClick, handlePrevClick}) => {
   };
 
 
-  const OffCanvas = ({partnerDetails, setPartnerDetails, leadRegistration}) => {
+  const OffCanvas = ({partnerDetails, setPartnerDetails, leadRegistration, handleNextClick}) => {
     return (
         <div>
             <a class="btn" style={{backgroundColor: "#43A3D5", color: "white"}} data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -104,7 +104,7 @@ const PersonalDetails = ({handleNextClick, handlePrevClick}) => {
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <PartnerRegistration channelPartner={true} leadRegistration={leadRegistration} partnerDetails={partnerDetails} setPartnerDetails={setPartnerDetails}  noHeaderFooter={true} />
+    <PartnerRegistration channelPartner={true} leadRegistration={leadRegistration} handleNextClick={handleNextClick} partnerDetails={partnerDetails} setPartnerDetails={setPartnerDetails}  noHeaderFooter={true} />
   </div>
 </div>
         </div>
@@ -141,15 +141,15 @@ function ChannelPartnerDetails({handleNextClick, handlePrevClick}) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Twenty</MenuItem>
-          <MenuItem value={21}>Twenty one</MenuItem>
-          <MenuItem value={22}>Twenty one and a half</MenuItem>
+          <MenuItem value={'10'}>Twenty</MenuItem>
+          <MenuItem value={'21'}>Twenty one</MenuItem>
+          <MenuItem value={'22'}>Twenty one and a half</MenuItem>
         </Select>
       </FormControl>
-      <OffCanvas partnerDetails={partnerDetails} leadRegistration={true} setPartnerDetails={setPartnerDetails} />
+      <OffCanvas partnerDetails={partnerDetails} handleNextClick={handleNextClick} leadRegistration={true} setPartnerDetails={setPartnerDetails} />
       <div className="stepMovers">
              <button className="prev" onClick={handlePrevClick}>Prev</button>
-             <button className="next" onClick={()=>handleNextClick({channelPartnerDetails: partnerDetails})}>Next</button>
+             <button className="next" onClick={()=>handleNextClick({channelPartner: partnerDetails})}>Next</button>
       </div>
     </div>
   );
@@ -346,7 +346,14 @@ const LeadRegistration = () => {
     // const [PropertyValue, setPropertyValue] = useState('');
     const [leadRegistration, setLeadRegistration] = useState({
       personalDetails: "",
-      channelPartnerDetails: "",
+      partnerName:"",
+      companyName: "",
+      executiveName: "",
+      email: "",
+      phoneNumber: "",
+      reraNumber: "",
+      comments: "",
+      channelPartner: "",
       configurationProspect: "",
       selectProspectBudget: "",
       contactable: "Yes",
@@ -363,7 +370,11 @@ const LeadRegistration = () => {
               if(!PropertyValue.termsAndConditions){
                 alert("Please accept the terms and conditions to complete the registration!");
               } else {
-                submitRegistration();
+                if(typeof PropertyValue.channelPartnerDetails === 'string'){
+                  submitRegistration(true);
+                }else{
+                  submitRegistration(false);
+                }
               }
               break;
             default:
@@ -379,17 +390,26 @@ const LeadRegistration = () => {
   }
 
     const submitRegistration = () => {
-      const userData = {
+
+      let userData = {
         firstName: leadRegistration.personalDetails.firstName,
         lastName: leadRegistration.personalDetails.lastName,
         phoneNumber: leadRegistration.personalDetails.phoneNumber,
         emailAddress: leadRegistration.personalDetails.emailAddress,
-        channelPartnerDetails: leadRegistration.channelPartnerDetails,
+        channelPartner: leadRegistration.channelPartner,
         configurationProspect: leadRegistration.configurationProspect,
         selectProspectBudget: leadRegistration.selectProspectBudget,
         contactable: leadRegistration.contactable,
         termsAndConditions: leadRegistration.termsAndConditions,
+        partnerName: leadRegistration.partnerName,
+        companyName: leadRegistration.companyName,
+        executiveName: leadRegistration.executiveName,
+        email: leadRegistration.email,
+        partnerPhoneNumber: leadRegistration.phoneNumber,
+        reraNumber: leadRegistration.reraNumber,
+        comments: leadRegistration.comments,
       };
+
       console.log(userData);
 
       const encode = (data) => {
@@ -419,7 +439,7 @@ const LeadRegistration = () => {
             <h1>Lead Registration</h1>
             
             {currStep === 1 && <PersonalDetails handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} />}
-            {currStep === 2 && <ChannelPartnerDetails handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} />}
+            {currStep === 2 && <ChannelPartnerDetails handleNextClick={handleNextClick} setCurrStep={setCurrStep} currStep={currStep} handlePrevClick={handlePrevClick} />}
             {currStep === 3 && <ConfigurationProspect handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} />}
             {currStep === 4 && <SelectProspectBudget handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} /> }
             {currStep === 5 && <Contactable handleNextClick={handleNextClick} handlePrevClick={handlePrevClick} /> }

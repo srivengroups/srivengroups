@@ -3,6 +3,7 @@ import GrcInfraLogo from '../images/grc-infra-logo.jpg';
 import HwBuildTechLogo from '../images/hw-buildtech-logo.png';
 import SipaniLogo from '../images/sipani-Logo.png';
 import SurakshaGroupLogo from '../images/suraksha-group-logo.png';
+import SumadhuraSushanthamLogo from '../images/Sumadhura-Logo.png';
 
 const OurPartners = () => {
     return (
@@ -14,6 +15,9 @@ const OurPartners = () => {
                     <section className="ourClientSection">
                         <div className="clientScroll-container">
                             <div className="logo">
+                                <img src={SurakshaGroupLogo} alt="Logo 4" />
+                            </div>
+                            <div className="logo">
                                 <img src={GrcInfraLogo} alt="Logo 1" />
                             </div>
                             <div className="logo">
@@ -23,7 +27,7 @@ const OurPartners = () => {
                                 <img src={SipaniLogo} alt="Logo 3" />
                             </div>
                             <div className="logo">
-                                <img src={SurakshaGroupLogo} alt="Logo 4" />
+                                <img src={SumadhuraSushanthamLogo} alt="Logo 5" />
                             </div>
                         </div>
                     </section>

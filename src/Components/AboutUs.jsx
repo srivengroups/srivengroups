@@ -36,7 +36,7 @@ const AboutUs = () => {
         <div className="aboutUsLogos">
         <div className="pair">
         <div className="aboutUsLogo">
-            <img src={GrcInfraLogo} height="50px" alt="Logo 1" />
+            <img src={SurakshaGroupLogo} height="50px" alt="Logo 1" />
         </div>
         <div className="aboutUsLogo">
             <img src={HwBuildTechLogo} height="50px" alt="Logo 1" />
@@ -47,7 +47,7 @@ const AboutUs = () => {
             <img src={SipaniLogo} height="50px" alt="Logo 1" />
         </div>
         <div className="aboutUsLogo">
-            <img src={SurakshaGroupLogo} height="50px" alt="Logo 1" />
+            <img src={GrcInfraLogo} height="50px" alt="Logo 1" />
         </div>
         </div>
         </div>

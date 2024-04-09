@@ -14,6 +14,7 @@ export default function MainSection() {
          <input type="hidden" name="form-name" value="user-name-and-email" />
         <input class="inputForm" type="text" name="name" id="name" placeholder="Name" />
         <input class="inputForm" type="email" name="email" id="email" placeholder="Email" />
+        <input class="inputForm" type="number" name="number" id="number" placeholder="number" />
         <input class="buttonForm" type="submit" value="Submit" />
          </form>
          </div>

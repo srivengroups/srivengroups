@@ -48,8 +48,8 @@ const UserPropertyRequest = () => {
     <div className="userPropertyRequest">
       <div className="agentDetails">
         <h5>Agent Sriven Groups</h5>
-        <p>Mobile: +123-456-7890</p>
-        <p>whatsapp: 9885196436</p>
+        <p>Mobile: 9036053618</p>
+        <p>whatsapp: 9036053618</p>
         <p>Email: info@srivengroups.com</p>
       </div>
 

@@ -447,7 +447,7 @@
   background-blend-mode: overlay, screen, overlay, overlay, normal;
   background-size: 120% 120%; */
   gap: 50px;
-  padding: 10% 5%;
+  padding: 3% 3%;
 }
 
 .contactSection form>h2, .contactSection form>p {
@@ -537,6 +537,7 @@
   padding: 50px 10px 50px 10px;
   align-items: flex-start;
   height: 500px;
+  padding: 80px 10px 30px 10px;
 }
 
 
@@ -634,7 +635,7 @@
 /************************************************* our partners *********************************************************************/
 
 div.partners {
-  padding: 7rem 0;
+  padding: 7rem 0 3rem 0;
   color: #000;
 }
 
@@ -671,7 +672,7 @@ div.partners .sec-title h1, div.partners .sec-title p {
 /* Smooth infinite scrolling animation */
 @keyframes ClientScrll {
   0% {
-      transform: translateX(0%);
+      transform: translateX(-50%);
   }
   100% {
       transform: translateX(100%);
@@ -684,7 +685,7 @@ div.partners .sec-title h1, div.partners .sec-title p {
 
 .clientScroll-container {
   display: flex;
-  animation: ClientScrll 40s linear infinite;
+  animation: ClientScrll 20s linear infinite;
 }
 
 
@@ -866,6 +867,10 @@ div.partners .sec-title h1, div.partners .sec-title p {
   width: max-content;
 }
 
+.PCContent {
+  max-width: 400px;
+}
+
 .projectCard .flatDetails {
   display: flex;
   flex-direction: row;
@@ -1000,9 +1005,6 @@ div.propertyFilters {
   .PCcardContent {
     width: -webkit-fill-available;
   }
-  .contactSection form {
-    min-width: none;
-  }
 
   .aboutSection {
     height: 100%;
@@ -1015,6 +1017,9 @@ div.propertyFilters {
 
  .privacyPolicy {
   padding: 50px 15px !important;
+ }
+ .contactSection form {
+  min-width: 200px;
  }
   
 }

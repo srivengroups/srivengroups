@@ -7,7 +7,7 @@ const ProjectCard = ({ image, details }) => {
   const isSmallScreen = useMediaQuery("(max-width: 992px)");
   return (
     <div className="card projectCard text-bg-dark">
-      <img src={details.imageUrl} height={!isSmallScreen && "400px"} className={isSmallScreen ? "card-img-top" : "card-img-left"} alt="property" />
+      <img src={details.imageUrl} height={!isSmallScreen && "500px"} className={isSmallScreen ? "card-img-top" : "card-img-left"} alt="property" />
       <div  className={isSmallScreen ? "card-body" : "card-img-overlay"}>
         <div className={isSmallScreen ? "": "cardContent"}>
            <h5 className="card-title">{details.heading}</h5>

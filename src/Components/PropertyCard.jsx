@@ -22,7 +22,7 @@ const PropertyCard = ({key, property}) => {
                 <p>{property.location}</p>
              </div>
              <div className="priceDetails">
-                <h5>{property.propertyStatus === "underConstruction"? "under construction": property.propertyStatus === "readyToMove"? "Ready to Move": "Sold Out" }</h5>
+                <h5>{property.propertyStatus === "underConstruction"? "Under Construction": property.propertyStatus === "readyToMove"? "Ready to Move": "Sold Out" }</h5>
                 <p>{property.priceDetails}</p>
                 <div className="pcBtns">
                     <Link to={"/lead-registration"} className="btn">Lead Registration</Link>

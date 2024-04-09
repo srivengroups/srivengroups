@@ -30,7 +30,6 @@ const WhySG = () => {
   return (
     <div className="whySGParent">
             <h1>Why <span style={{WebkitTextFillColor: "#E62249"}}>Choose Us?</span></h1>
-            <h6>Donec semper a leo non euismod. Etiam eu laoreet ex, non luctus</h6>
             <div className="whySG">
       <div className="grid-container">
         {content.map((item, index) => (

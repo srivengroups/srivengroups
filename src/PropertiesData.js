@@ -2,7 +2,7 @@ import UnicornHighcliff from './images/unicorn-highclif.jpg';
 import SurakshaHeritage from './images/suraksha-heritage.jpg';
 import GrcSaffrone from './images/grc-saffrone.png';
 import SumadhuraSushantham from './images/sumadhura-sushantham.jpg';
-import SurakshaSprings from './images/surakshaSprings.png';
+import SurakshaSprings from './images/Suraksha-Springs.jpg';
 
 const PropertiesData = [
     {
@@ -25,7 +25,7 @@ In summary, Suraksha Springs presents an exciting opportunity for those seeking 
       location: "At Begur Road, Bangalore",
       unitSize: "1040 to 1515 sqft",
       propertyStatus: "underConstruction",
-      reraNumber: "PRM/KA/RERA/1251/309/PR/ 200103/003118",
+      reraNumber: "-",
       features: `Swimming Pool with Natural Rock Waterfall,Steam and Sauna,Kids' Splash Pool,Hall with Karaoke,Dance Floor,Banquet Hall,Multimedia Theatre,Outdoor Cafe,Convenience Store,Party Lawn,Gym`,
       price: "below1cr,above1cr",
       floorPlans: "2BHK,3 BHK",
@@ -118,7 +118,7 @@ In summary, Suraksha Springs presents an exciting opportunity for those seeking 
     {
       
       heading: "GRC Saffron Skies",
-      shortDescription:"we swear by the Hygge way of life, embodying five fundamental ways of good living!",
+      shortDescription:`we swear by the Hygge way of life, embodying five fundamental ways of good living!`,
       description: "A villa community inspired by Hygge way of joyful, sustainable and splendid living",
       area: "0.55 Acres",
       bedrooms: "3 & 4 BHK Villas & Villaments",

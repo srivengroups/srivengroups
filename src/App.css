@@ -653,7 +653,7 @@ div.partners .sec-title h1, div.partners .sec-title p {
 
 .clientScroll-container {
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
   gap: 20px;
   align-items: center;
 }
@@ -1021,6 +1021,19 @@ div.propertyFilters {
  .contactSection form {
   min-width: 200px;
  }
+
+ .services {
+  padding: 20px 5px;
+}
+
+@keyframes ClientScrll {
+  0% {
+      transform: translateX(-170%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
   
 }
 

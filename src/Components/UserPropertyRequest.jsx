@@ -30,7 +30,8 @@ const UserPropertyRequest = () => {
         .join("&");
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -53,7 +54,7 @@ const UserPropertyRequest = () => {
         <p>Email: info@srivengroups.com</p>
       </div>
 
-    <form name="user-property-request" method="POST" className="userPropertyRequestForm">
+    <form name="user-property-request" method="POST" onSubmit={handleSubmit} className="userPropertyRequestForm">
     
       <div className="field">
         <label htmlFor="name">Name:</label>
@@ -94,7 +95,7 @@ const UserPropertyRequest = () => {
           onChange={handleChange}
         />
       </div>
-      <button type="submit" onClick={handleSubmit}>Submit</button>
+      <button type="submit">Submit</button>
     </form>
      <div className="btns">
         <button type="button"  onClick={handleCallNow}>Call Now</button>

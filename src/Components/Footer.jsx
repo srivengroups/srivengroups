@@ -19,7 +19,6 @@ const Footer = () => {
           <li class="nav-item mb-2"><a href="/properties/readyToMove" class="nav-link p-0">Properties</a></li>
           <li class="nav-item mb-2"><a href="/channel-partners" class="nav-link p-0">Channel Partners</a></li>
           <li class="nav-item mb-2"><a href="/#propertyListings" class="nav-link p-0">Property Listings</a></li>
-          <li class="nav-item mb-2"><a href="/privacy-policy" class="nav-link p-0">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -28,7 +27,7 @@ const Footer = () => {
           <li class="nav-item mb-2"><a href="/#aboutUs" class="nav-link p-0">About Us</a></li>
           <li class="nav-item mb-2"><a href="/#contactUs" class="nav-link p-0">Contact Us</a></li>
           <li class="nav-item mb-2"><a href="/#services" class="nav-link p-0">Our Services</a></li>
-          <li class="nav-item mb-2"><a href="/#testimonials" class="nav-link p-0">Testimonials</a></li>
+          <li class="nav-item mb-2"><a href="/privacy-policy" class="nav-link p-0">Privacy Policy</a></li>
         </ul>
       </div>
 

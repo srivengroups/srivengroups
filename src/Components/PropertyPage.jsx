@@ -36,12 +36,12 @@ const PropertyPage = ({ properties }) => {
         <div className="nonMapAndMortgage">
           <div className="propertyPageMetaData">
             <div className="pictureDetails">
-              <img src={property.imageUrl} height={"300px"} alt="image3" />
+              <img src={property.imageUrl} height={"300px"}  alt="image3" />
             </div>
           </div>
 
           <div className="propertyContent">
-            <p>Property ID: SVG-875347</p>
+            <p>Property ID: SVG-{property.id}</p>
             <div className="flatDetails">
               <div>
                 <p>Bedrooms</p>
@@ -125,7 +125,7 @@ const PropertyPage = ({ properties }) => {
         </div>
         </div>
         <div className="AgentContactRequest">
-            <UserPropertyRequest />
+            <UserPropertyRequest brochureLinkID={property.brochureLinkID} />
         </div>
       </div>
 

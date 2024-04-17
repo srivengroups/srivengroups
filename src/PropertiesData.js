@@ -6,6 +6,7 @@ import SurakshaSprings from './images/Suraksha-Springs.jpg';
 
 const PropertiesData = [
     {
+      id: "678917",
       heading: "Suraksha Springs",
       shortDescription: "Located in the heart of the city at Suraksha Springs",
       description: `
@@ -31,9 +32,11 @@ In summary, Suraksha Springs presents an exciting opportunity for those seeking 
       floorPlans: "2BHK,3 BHK",
       floorPrices: "80-92 Lakhs,1.06 - 1.16 Crores",
       imageUrl: SurakshaSprings,
+      brochureLinkID: "",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7068384340123!2d77.61206097483941!3d12.862201887443268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b0e8ca572d1%3A0x193a99119463a09b!2sSuraksha%20Springs!5e0!3m2!1sen!2sin!4v1712582054134!5m2!1sen!2sin"
     },
     {
+      id: "678916",
       heading: "Unicorn(Highcliff)",
       shortDescription: `Walk to work Condos, Next to Cessna Business Park, ORR`,
       description: `
@@ -60,9 +63,11 @@ In summary, Suraksha Springs presents an exciting opportunity for those seeking 
       reraNumber: "PRM/KA/RERA/1251/446/PR/171031/001436",
       features: `ClubHouse,Gym,Landscaped Gardens,Swimming Pool,Business Center,Covered Car Parking,Billiards,Day Care,Meditation Hall,Play Area,Snooker,Spa,Table Tennis,Terrace Garden`,
       imageUrl: UnicornHighcliff,
+      brochureLinkID: "14a5DLAw-5Quu9la7xCKkX5EDvLwwu_-S",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31109.809220560826!2d77.6551177460982!3d12.925314242671824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae132f81981877%3A0x27d2336671de1637!2sHigh%20Cliff!5e0!3m2!1sen!2sin!4v1712581957465!5m2!1sen!2sin"
     },
     {
+      id: "678914",
       heading: "Sumadhura Sushantham",
       shortDescription: "Let the nature be a neighbour.",
       description: `Sumadhura Sushantham epitomizes the 
@@ -93,9 +98,11 @@ In summary, Suraksha Springs presents an exciting opportunity for those seeking 
       reraNumber: "PRM/KA/RERA/1251/309/PR/ 200103/003118",
       features: `SWIMMING POOL,GYM,KIDS PLAY AREA,GARDEN,JOGGING TRACK,SECURITY SYSTEM,MEDITATION ZONE,SKATING RING,SENIOR CITIZEN AREA,INDOOR GAMES`,
       imageUrl: SumadhuraSushantham,
+      brochureLinkID: "",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3766851013497!2d77.56274922484326!3d13.075296887249642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae192ca2bc172f%3A0x6e74ca9c287b3d6a!2sSumadhura%20Sushantham!5e0!3m2!1sen!2sin!4v1712581313353!5m2!1sen!2sin"
     },
     {
+      id: "678913",
       heading: "Suraksha Heritage Park",
       shortDescription: "From Bannerghatta road's most loved boutique developer",
       description: "Sunshine sunset",
@@ -113,10 +120,11 @@ In summary, Suraksha Springs presents an exciting opportunity for those seeking 
       reraNumber: "PRM/KA/RERA/1251/310/PR/210813/004259",
       features: `Multipurpose Court,Swimming Pool,Interactive Water Fountain,Co-working Space,Reflexology,Aroma Garden,Elderly Park,Kid’s Play Area,Outdoor Fitness Park,Gym,Yoga Deck,Multipurpose Hall,Amphitheatre,Cricket Practice Pitch,Hammock,Pets Corner`,
       imageUrl: SurakshaHeritage,
+      brochureLinkID: "",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5941185602605!2d77.61985087483956!3d12.869471487436627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b7949b28b51%3A0xff5ae85bfd350ebe!2sSuraksha%20Heritage%20Park!5e0!3m2!1sen!2sin!4v1712581745259!5m2!1sen!2sin"
     },
     {
-      
+      id: "678912",
       heading: "GRC Saffron Skies",
       shortDescription:`we swear by the Hygge way of life, embodying five fundamental ways of good living!`,
       description: "A villa community inspired by Hygge way of joyful, sustainable and splendid living",
@@ -134,6 +142,7 @@ In summary, Suraksha Springs presents an exciting opportunity for those seeking 
       reraNumber: "PRM/KA/RERA/1251/310/PR/220623/006016",
       features: "Yoga Lawn,Indoor Games,Jogging Track,Kids Play Area,Party Lawn,Amphitheatre,Gym,Basketball Court,Badminton Court,Apa And Salon",
       imageUrl: GrcSaffrone,
+      brochureLinkID: "",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.421110310929!2d77.49515117483851!3d12.816042387485215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae41b1a5fa2065%3A0xea64f4a7786cc7b6!2sSAFFRON%20SKIES%20BY%20GRC!5e0!3m2!1sen!2sin!4v1712581832042!5m2!1sen!2sin"
     },
   ]

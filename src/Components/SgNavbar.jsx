@@ -1,8 +1,14 @@
 import React from "react";
 import SrivenLogoImg from "../images/web logo (1).png";
 import { Link } from "react-router-dom";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export default function SgNavbar({fixedTop}) {
+  const handleWhatsAppClick = () => {
+    // Replace "1234567890" with your WhatsApp number
+    const whatsappUrl = 'https://api.whatsapp.com/send?phone=9036053618';
+    window.open(whatsappUrl, '_blank');
+  };
   return (
 <nav className={`navbar sgNavbar navbar-expand-lg navbar-light bg-light ${fixedTop? "fixed-top": ""}`}>
   <div class="container-fluid navbarContent">
@@ -33,6 +39,12 @@ export default function SgNavbar({fixedTop}) {
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/#contactUs">Contact US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#contactUs">
+          <div className='whatsappIcon' onClick={handleWhatsAppClick}>
+           <WhatsAppIcon />
+          </div></a>
         </li>
       </ul>
     </div>

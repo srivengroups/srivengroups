@@ -1174,28 +1174,30 @@ div.propertyFilters {
 /*************************************************whatsapp icon ************************************************************/
 
 .whatsappIcon {
-  position: fixed;
-  background-color: green;
-  bottom: 20px;
-  right: 20px;
-  min-width: 50px;
-  max-width: 50px;
-  height: 50px;
+  /* position: fixed; */
+  /* background-color: green !important; */
+  /* bottom: 20px;
+  right: 20px; */
+  /* min-width: 50px;
+  max-width: 70px; */
+  height: 30px !important;
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .whatsappIcon svg {
-  width: 100%;
   height: 100%;
-  color: white;
+  color: green !important;
+  width: fit-content;
 }
 
 
 /********************************************************* propertyPage ********************************************************/
 .propertyPageHeading {
   height: max-content;
-  min-height: 300px;
+  min-height: 350px;
   background: linear-gradient(125deg, #00FF57 0%, #010033 40%, #460043 70%, #F0FFC5 100%), linear-gradient(55deg, #0014C9 0%, #410060 100%), linear-gradient(300deg, #FFC700 0%, #001AFF 100%), radial-gradient(135% 215% at 115% 40%, #393939 0%, #393939 40%, #849561 calc(40% + 1px), #849561 60%, #EED690 calc(60% + 1px), #EED690 80%, #ECEFD8 calc(80% + 1px), #ECEFD8 100%), linear-gradient(125deg, #282D4F 0%, #282D4F 40%, #23103A calc(40% + 1px), #23103A 70%, #A0204C calc(70% + 1px), #A0204C 88%, #FF6C00 calc(88% + 1px), #FF6C00 100%);
   background-blend-mode: overlay, screen, overlay, overlay, normal;
   background-size: 130% 100%;
@@ -1313,7 +1315,7 @@ div.propertyFilters {
   position: absolute;
   bottom: 0px;
   color: white;
-  padding: 0 50px 20px 30px;
+  padding: 60px 20px 30px;
   align-items: baseline;
   flex-wrap: wrap;
 }

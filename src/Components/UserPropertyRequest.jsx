@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const UserPropertyRequest = () => {
+const UserPropertyRequest = ({brochureLinkID}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,20 +37,16 @@ const UserPropertyRequest = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "user-property-request",...formData })
     })
-     .then(() => alert("Successfully submitted!"))
+     .then(() => window.open(`https://drive.google.com/u/1/uc?id=${brochureLinkID}&export=download`, "_blank"))
      .catch(error => alert(error));
   }
-
-
-
 
 
   return (
     <div className="userPropertyRequest">
       <div className="agentDetails">
-        <h5>Agent Sriven Groups</h5>
+        <h5>Reach Us</h5>
         <p>Mobile: 9036053618</p>
-        <p>whatsapp: 9036053618</p>
         <p>Email: info@srivengroups.com</p>
       </div>
 
@@ -95,7 +91,7 @@ const UserPropertyRequest = () => {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">DOWNLOAD BROCHURE</button>
     </form>
      <div className="btns">
         <button type="button"  onClick={handleCallNow}>Call Now</button>

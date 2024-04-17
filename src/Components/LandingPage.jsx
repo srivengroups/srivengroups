@@ -10,7 +10,6 @@ import OurPartners from './OurPartners';
 import Services from './Services';
 import apartmentImg1 from "../images/apartmentImg1.jpg";
 import apartmentImg2 from "../images/apartmentImg2.jpg";
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
 const images = [
@@ -18,12 +17,6 @@ const images = [
    [apartmentImg2, apartmentImg1],
    [apartmentImg1, apartmentImg2]
 ]
-
-const handleWhatsAppClick = () => {
-  // Replace "1234567890" with your WhatsApp number
-  const whatsappUrl = 'https://api.whatsapp.com/send?phone=9036053618';
-  window.open(whatsappUrl, '_blank');
-};
 
 function LandingPage({properties}) {
   return (
@@ -39,9 +32,6 @@ function LandingPage({properties}) {
       {/* <ContactUs /> */}
       <KnowMore />
       <Footer />
-      <div className='whatsappIcon' onClick={handleWhatsAppClick}>
-      <WhatsAppIcon />
-    </div>
     </div>
   );
 }

@@ -46,7 +46,7 @@ const SkyBlossomForm = ({ sectionName, floor }) => {
         navigate('/skyblossom/thank-you');
         break;
       case 'brochure':
-        window.open(`https://drive.google.com/u/1/uc?id=14a5DLAw-5Quu9la7xCKkX5EDvLwwu_-S&export=download`, "_blank");
+        window.open(`https://drive.google.com/u/1/uc?id=1kAu2asev20RxZiXepWbYkPc1NjvXFk9a&export=download`, "_blank");
         break;
       case 'floorPlan':
         navigate('/skyblossom/floor-price', { state: { floor: floor } });
@@ -59,6 +59,7 @@ const SkyBlossomForm = ({ sectionName, floor }) => {
         break;
     }
   };
+  // https://drive.google.com/file/d/1kAu2asev20RxZiXepWbYkPc1NjvXFk9a/view?usp=sharing
 
   const handleSubmit = async () => {
     if (!validateForm()) {

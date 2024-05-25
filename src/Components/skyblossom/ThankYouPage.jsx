@@ -20,7 +20,7 @@ const ThankYouPage = () => {
 
     const handleClick = (event) => {
         event.preventDefault();
-        window.open(`https://drive.google.com/u/1/uc?id=14a5DLAw-5Quu9la7xCKkX5EDvLwwu_-S&export=download`, "_blank")
+        window.open(`https://drive.google.com/u/1/uc?id=1kAu2asev20RxZiXepWbYkPc1NjvXFk9a&export=download`, "_blank");
     }
 
     return (

@@ -12,10 +12,10 @@ export default function MainSection() {
          <h6>"Unlock Your Dream Home: Explore Endless Possibilities with Sriven Groups.<br /> Welcome to a World of Exceptional Properties and Personalized Service."</h6>
          <form class="FormSection" name="user-name-and-email" method="POST">
          <input type="hidden" name="form-name" value="user-name-and-email" />
-        <input class="inputForm" type="text" name="name" id="name" placeholder="Name" />
-        <input class="inputForm" type="email" name="email" id="email" placeholder="Email" />
-        <input class="inputForm" type="number" name="number" id="number" placeholder="Mobile Number" />
-        <input class="buttonForm" type="submit" value="Submit" />
+         <input class="inputForm" type="text" name="name" id="name" placeholder="Name" />
+         <input class="inputForm" type="email" name="email" id="email" placeholder="Email" />
+         <input class="inputForm" type="number" name="number" id="number" placeholder="Mobile Number" />
+         <input class="buttonForm" type="submit" value="Submit" />
          </form>
          </div>
         </div>

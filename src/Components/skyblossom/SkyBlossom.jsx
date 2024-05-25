@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -41,7 +42,7 @@ import Footer from '../Footer';
 
 import Popover from '@mui/material/Popover';
 import SkyBlossomForm from './SkyBlossomForm';
-// import SgNavbar from './SgNavbar';
+import { Helmet} from 'react-helmet';
 
 function BasicPopover({sectionName, floor}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -112,16 +113,6 @@ function BasicPopover({sectionName, floor}) {
    }
 
 </Popover>
-
-      {/* <Popover
-        
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-      >
-        
-      </Popover> */}
     </div>
   );
 }
@@ -384,8 +375,8 @@ const ContactUS = () => {
             <h4>Karnataka 560068</h4>
           </div>
           <div className="socialLinks">
-            <i class="fa-brands fa-facebook fa-8x fa-xl"></i>
-            <i class="fa-brands fa-instagram fa-8x fa-xl"></i>
+            <a href='https://www.facebook.com/Srivengroups.2024'><i class="fa-brands fa-facebook fa-8x fa-xl"></i></a>
+            <a href='https://www.instagram.com/srivengroups/?next=%2F&hl=en'><i class="fa-brands fa-instagram fa-8x fa-xl"></i></a>
           </div>
         </div>
         <div className="form">
@@ -513,8 +504,25 @@ const Amenities = () => {
 
 
 const SkyBlossom = () => {
+
+  useEffect(() => {
+      const timer = setTimeout(() => {
+        const button = document.querySelector(`button.enquireNow`);
+        if (button) {
+          button.click();
+        }
+      }, 1000);
+
+      return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
   return (
     <div className='skyBlossom'>
+      <Helmet>
+        <title>SkyBlossom</title>
+        <link rel="icon" width="100px" href="../../images/favicons/skyblossom/favicon.ico" />
+        <link rel="apple-touch-icon" href="../../images/favicons/skyblossom/android-chrome-192x192.png" />
+        <link rel="apple-touch-icon" sizes="512x512" href="../../images/favicons/skyblossom/android-chrome-512x512.png" />
+      </Helmet>
       <HeroSection />
       <SellingPricePoint />
       <AboutUs />

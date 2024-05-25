@@ -59,7 +59,6 @@ const SkyBlossomForm = ({ sectionName, floor }) => {
         break;
     }
   };
-  // https://drive.google.com/file/d/1kAu2asev20RxZiXepWbYkPc1NjvXFk9a/view?usp=sharing
 
   const handleSubmit = async () => {
     if (!validateForm()) {
@@ -86,7 +85,7 @@ const SkyBlossomForm = ({ sectionName, floor }) => {
 
   return (
     <form>
-      {sectionName === 'enquireNow' && <h5>Enquire Now</h5>}
+      {sectionName === 'enquireNow' && <h5 style={{textAlign: 'center'}}>Enquire Now</h5>}
       <input
         type="text"
         className="formControl"

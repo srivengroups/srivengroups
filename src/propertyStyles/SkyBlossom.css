@@ -331,6 +331,10 @@ select:invalid { color: gray; }
     gap: 20px;
 }
 
+.formAndContent .contactUsContent .socialLinks a {
+    color: white;
+}
+
 .formAndContent .form form {
     display: flex;
     flex-direction: column;

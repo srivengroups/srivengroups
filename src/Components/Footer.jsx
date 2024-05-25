@@ -45,8 +45,8 @@ const Footer = () => {
       <p>© 2024 SRIVEN GROUPS, Inc. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
           <li class="ms-3"><div class="link-body-emphasis" href="#"><XIcon style={{ fontSize: '3rem', color: 'white' }} /></div></li>
-          <li class="ms-3"><div class="link-body-emphasis" href="#"><InstagramIcon style={{ fontSize: '3rem', color: 'white' }} /></div></li>
-          <li class="ms-3"><div class="link-body-emphasis" href="#"><FacebookIcon style={{ fontSize: '3rem', color: 'white' }} /></div></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/srivengroups/?next=%2F&hl=en"><InstagramIcon style={{ fontSize: '3rem', color: 'white' }} /></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/Srivengroups.2024"><FacebookIcon style={{ fontSize: '3rem', color: 'white' }} /></a></li>
           <li class="ms-3"><div class="link-body-emphasis" href="#"><YouTubeIcon style={{ fontSize: '3rem', color: 'white' }} /></div></li>
         </ul>
     </div>

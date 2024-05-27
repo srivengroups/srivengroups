@@ -52,6 +52,10 @@
     /* box-shadow: 2px 2px black; */
 }
 
+.offcanvas {
+    width: 60%;
+}
+
 .heroSection .owl-theme .owl-dots {
     position: absolute;
     bottom: 50px;
@@ -63,16 +67,16 @@
 }
 
 
-.navbar {
+.skyBlossom .heroSection .navbar {
     padding: 10px 10%;
 }
 
-.navbar-nav {
+.heroSection .navbar-nav {
     justify-content: center;
     align-items: center;
 }
 
-.navbar-nav a {
+.heroSection .navbar-nav a {
     color: #9E4518 !important;
     /* font-size: 20px; */
     font-weight: 700;
@@ -90,7 +94,7 @@
     text-align: center;
 }
 
-.aboutUs {
+.skyBlossom .aboutUs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -99,35 +103,35 @@
     padding: 30px 0;
 }
 
-.aboutUs .picture {
+.skyBlossom .aboutUs .picture {
     display: flex;
     align-items: center;
 }
 
-.aboutUs .picture img{
+.skyBlossom .aboutUs .picture img{
     max-height: 400px;
     border-radius: 5px;
 }
 
-.aboutUs .content {
+.skyBlossom .aboutUs .content {
     display: flex;
     line-height: 2;
     align-items: flex-start;
     padding: 0 10px;
 }
 
-.aboutUs .content h1 {
+.skyBlossom .aboutUs .content h1 {
     color: #9E4518;
 }
 
-.aboutUs .content p {
+.skyBlossom .aboutUs .content p {
    max-width: 400px;
    line-height: 1.5 !important;
    text-align: justify;
    color: #9E4518;
 }
 
-.aboutUs .content button {
+.skyBlossom .aboutUs .content button {
     border: 0;
     background-color: #9E4518;
     color: white;
@@ -575,22 +579,22 @@ select:invalid { color: gray; }
 
 
 @media screen and (max-width: 1140px) {
-    .aboutUs .picture img{
+    .skyBlossom .aboutUs .picture img{
         max-height: 300px;
     }
 
-    .aboutUs {
+    .skyBlossom .aboutUs {
         gap: 20px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .aboutUs .picture img{
+    .skyBlossom .aboutUs .picture img{
         max-height: 200px;
     }
 
-    .locationAdvantage iframe {
-        width: 500px !important;
+    .skyBlossom .locationAdvantage iframe {
+        width: 500px;
     }
 
     .container {
@@ -620,6 +624,10 @@ select:invalid { color: gray; }
     .advantages {
         grid-template-columns: repeat(2,2fr);
     }
+
+    .skyBlossom .heroSection .navbar {
+        padding: 10px 0;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -634,7 +642,7 @@ select:invalid { color: gray; }
 }
 
 @media screen and (max-width: 360px) {
-    .aboutUs .picture img{
+    .skyBlossom .aboutUs .picture img{
         max-height: 150px;
     }
     .locationAdvantage iframe {
@@ -651,7 +659,7 @@ select:invalid { color: gray; }
 }
 
 @media screen and (max-width: 270px) {
-    .aboutUs .picture img{
+    .skyBlossom .aboutUs .picture img{
         max-height: 130px;
     }
 

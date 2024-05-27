@@ -57,6 +57,10 @@ function BasicPopover({sectionName, floor}) {
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
+  const isMobile = useMediaQuery('(max-width:600px)');
+  const isTab = useMediaQuery('(max-width:1000px)');
+
+  const position = isMobile ? { top: 450, left: 200 }: isTab ? { top: 500, left: 400 } : { top: 400, left: 700 }
 
   return (
     <div>
@@ -78,9 +82,11 @@ function BasicPopover({sectionName, floor}) {
      }
 
 
+
       <Popover 
   anchorReference="anchorPosition"
-  anchorPosition={{ top: 400, left: 700 }}
+  anchorPosition= {position}
+
   id={id}
         open={open}
         anchorEl={anchorEl}
@@ -166,6 +172,10 @@ const HeroSection = () => {
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
+          <div class="offcanvas-header">
+        
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-grow-1 pe-3">
                 <li class="nav-item">

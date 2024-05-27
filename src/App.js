@@ -15,6 +15,7 @@ import PrivacyPolicy from './Components/PrivacyPolicy';
 import SkyBlossom from './Components/skyblossom/SkyBlossom';
 import ThankYouPage from './Components/skyblossom/ThankYouPage';
 import FloorPrice from './Components/skyblossom/FloorPrice';
+import Lavivant from './Components/lavivant/Lavivant';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/skyblossom' element={<SkyBlossom />} />
         <Route path='/skyblossom/thank-you' element={<ThankYouPage />} />
         <Route path='/skyblossom/floor-price' element={<FloorPrice />} />
+        <Route path='/lavivant' element={<Lavivant />} />
       </Routes>
     </Router>
   );

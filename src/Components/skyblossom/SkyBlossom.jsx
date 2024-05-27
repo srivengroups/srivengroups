@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import {useEffect, useRef } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -47,8 +47,11 @@ import { Helmet} from 'react-helmet';
 function BasicPopover({sectionName, floor}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const [position, setPosition] = React.useState({ top: window.innerHeight / 2, left: window.innerWidth / 2 });
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+    setPosition({ top: window.innerHeight / 2, left: window.innerWidth / 2 }); // Add 100px to top
   };
 
   const handleClose = () => {
@@ -57,11 +60,6 @@ function BasicPopover({sectionName, floor}) {
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
-  const isMobile = useMediaQuery('(max-width:600px)');
-  const isTab = useMediaQuery('(max-width:1000px)');
-
-  const position = isMobile ? { top: 450, left: 200 }: isTab ? { top: 500, left: 400 } : { top: 400, left: 700 }
-
   return (
     <div>
      {
@@ -85,7 +83,7 @@ function BasicPopover({sectionName, floor}) {
 
       <Popover 
   anchorReference="anchorPosition"
-  anchorPosition= {position}
+  anchorPosition={position}
 
   id={id}
         open={open}
@@ -100,6 +98,10 @@ function BasicPopover({sectionName, floor}) {
     horizontal: 'center',
   }}
 > 
+
+<button type="button" className="close formCloseBtn" aria-label="Close" onClick={handleClose}>
+            <span aria-hidden="true">&times;</span>
+          </button>
    {sectionName === 'floorPlan' && 
         <div className="floorPlanForm">
           <SkyBlossomForm sectionName={sectionName} floor={floor} />
@@ -123,7 +125,7 @@ function BasicPopover({sectionName, floor}) {
   );
 }
 
-const HeroSection = () => {
+const HeroSection = ({ scrollToSection, homeRef }) => {
   const options = {
     items: 2,
     loop: true,
@@ -142,7 +144,7 @@ const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
   const isTab = useMediaQuery('(max-width:840px)');
   return (
-    <section className="heroSection" id='home'>
+    <section ref={homeRef} className="heroSection" id='home'>
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
           <Link to={"/#home"} className='srivenGroupsLogo'>
@@ -179,46 +181,46 @@ const HeroSection = () => {
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/skyblossom/#home">
+                  <div class="nav-link active" aria-current="page" onClick={() => scrollToSection('home')}>
                     Home
-                  </a>
+                  </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/skyblossom/#aboutUs">
+                <li class="nav-item" >
+                  <div class="nav-link" onClick={() => scrollToSection('about')}>
                     About
-                  </a>
+                  </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/skyblossom/#gallery">
+                  <div class="nav-link" onClick={() => scrollToSection('gallery')}>
                     Gallery
-                  </a>
+                  </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/skyblossom/#amenities">
-                    Amenities
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/skyblossom/#floorPlans">
+                  <div class="nav-link" onClick={() => scrollToSection('floor')}>
                     Floor Plans
-                  </a>
+                  </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/skyblossom/#location">
-                    Location
-                  </a>
+                  <div class="nav-link"  onClick={() => scrollToSection('amenities')}>
+                    Amenities
+                  </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/skyblossom/#contactUs">
+                  <div class="nav-link" onClick={() => scrollToSection('contact')}>
                     Contact Us
-                  </a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link" onClick={() => scrollToSection('location')}>
+                    Location
+                  </div>
                 </li>
                 <li class="nav-item">
                   
                     <BasicPopover className='nav-link' sectionName={'enquireNow'} />
                 </li>
               </ul>
-              <Link to={"/#home"}>
+              <Link onClick={() => scrollToSection('home')}>
                 <img
                   src={DsMaxImg}
                   alt="Ds max logo"
@@ -230,6 +232,7 @@ const HeroSection = () => {
           </div>
         </div>
       </nav>
+      {/* <div className='navbarFiller'></div> */}
       <OwlCarousel className='owl-theme'  {...options}>
       <div className='item'>
           <img src={isMobile ? MobileBanner1 : isTab? TabBanner1 : Banner2} alt="sky blossom building" />
@@ -266,22 +269,24 @@ const SellingPricePoint = () => {
   );
 };
 
-const AboutUs = () => {
+const AboutUs = ({aboutRef}) => {
   return (
-    <section className="aboutUs" id='aboutUs'>
+    <section ref={aboutRef} className="aboutUs" id='aboutUs'>
       <div className="picture">
         <img src={HeroSectionImg} alt="sky blossom building"></img>
       </div>
       <div className="content">
         <h1 className='alex-brush-regular'>About Us</h1>
         <p>
-          DS Max Sky Bloom is an up-and-coming project in Begur Street, Bangalore. 
-          One of the most promising ventures on the skyline, the project is located 
-          in the affluent Yelahanka Hobli zone of Bangalore. Developed by DS Max Group, 
-          this project features carefully designed 2 BHK flats and 3 BHK apartments for 
-          sale, along with a host of amenities. Set in a prime location, it epitomizes modern, 
-          comfortable living. From its strategic area to the amenities it offers, DS Max Sky Bloom
-          provides a comprehensive understanding of what future inhabitants can expect.
+        DS Max Sky Blossom, located in Begur, Bangalore, is a 
+        standout residential project known for its luxurious 
+        architecture and well-thought-out amenities. This BBMP-approved 
+        development features 255 units spread across 2 basements, a ground 
+        floor, and 14 additional floors, offering a selection of 2 and 3 BHK 
+        apartments. Each home is meticulously designed to prioritize comfort and style, 
+        ensuring that residents enjoy more than just a place to live. With its prime location, 
+        DS Max Sky Blossom offers a perfect blend of convenience and luxury, making it an excellent 
+        choice for those seeking an elevated living experience in Bangalore.
         </p>
         {/* <button>Learn More</button> */}
       </div>
@@ -289,7 +294,7 @@ const AboutUs = () => {
   );
 };
 
-const Glossary = () => {
+const Glossary = ({galleryRef}) => {
 
   const options = {
     items: 3,
@@ -312,7 +317,7 @@ const Glossary = () => {
     }
   }
   return (
-    <section className="glossary" id='gallery'>
+    <section ref={galleryRef} className="glossary" id='gallery'>
       <h1 className='alex-brush-regular'>Gallery</h1>
       <div className="glossaryCarousel">
       <OwlCarousel className='owl-theme' {...options} >
@@ -346,9 +351,9 @@ const Glossary = () => {
   );
 };
 
-const FloorPlans = () => {
+const FloorPlans = ({floorRef}) => {
   return (
-    <section className="floorPlans" id='floorPlans'>
+    <section ref={floorRef} className="floorPlans" id='floorPlans'>
       <h1 className='alex-brush-regular'>Floor Plans</h1>
       <div className="plans">
         <div className="plan">
@@ -374,9 +379,9 @@ const FloorPlans = () => {
   );
 };
 
-const ContactUS = () => {
+const ContactUS = ({contactRef}) => {
   return (
-    <section className="contactUs" id='contactUs'>
+    <section ref={contactRef} className="contactUs" id='contactUs'>
       <div className="formAndContent">
         <div className="contactUsContent">
           <div className="title">
@@ -397,10 +402,10 @@ const ContactUS = () => {
   );
 };
 
-const LocationAdvantage = () => {
+const LocationAdvantage = ({locationRef}) => {
 
   return(
-    <section className="locationAdvantage" id='location'>
+    <section ref={locationRef} className="locationAdvantage" id='location'>
       <h1 className='alex-brush-regular'>Location Advantages</h1>
       <div className="locationAdvantageContent">
       <div className="SBMap">
@@ -437,7 +442,7 @@ const LocationAdvantage = () => {
   )
 }
 
-const Amenities = () => {
+const Amenities = ({amenitiesRef}) => {
 
   const options = {
     items: 3,
@@ -461,7 +466,7 @@ const Amenities = () => {
   }
 
   return (
-    <section className='amenities' id='amenities'>
+    <section ref={amenitiesRef} className='amenities' id='amenities'>
       <h1 className='alex-brush-regular'>Amenities</h1>
       <OwlCarousel className='amenityList owl-theme'  {...options}>
         <div className='amenity item'>
@@ -515,13 +520,49 @@ const Amenities = () => {
 
 const SkyBlossom = () => {
 
+  const homeRef = useRef();
+  const aboutRef = useRef();
+  const galleryRef = useRef();
+  const contactRef = useRef();
+  const locationRef = useRef();
+  const amenitiesRef = useRef();
+  const floorRef = useRef();
+
+  const scrollToSection = (section) => {
+    switch (section) {
+      case 'home':
+        homeRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        break;
+      case 'about':
+        aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        break;
+      case 'contact':
+        contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        break;
+      case 'amenities':
+        amenitiesRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        break;
+      case 'floor':
+        floorRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        break;
+      case 'location':
+        locationRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        break;
+      case 'gallery':
+        galleryRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        break;
+      default:
+        break;
+    }
+  };
+
   useEffect(() => {
       const timer = setTimeout(() => {
         const button = document.querySelector(`button.enquireNow`);
         if (button) {
           button.click();
         }
-      }, 1000);
+      }, 3000);
 
       return () => clearTimeout(timer); // Cleanup the timer on component unmount
   }, []);
@@ -533,14 +574,14 @@ const SkyBlossom = () => {
         <link rel="apple-touch-icon" href="../../images/favicons/skyblossom/android-chrome-192x192.png" />
         <link rel="apple-touch-icon" sizes="512x512" href="../../images/favicons/skyblossom/android-chrome-512x512.png" />
       </Helmet>
-      <HeroSection />
+      <HeroSection homeRef={homeRef} scrollToSection={scrollToSection} />
       <SellingPricePoint />
-      <AboutUs />
-      <Glossary />
-      <FloorPlans />
-      <Amenities />
-      <ContactUS />
-      <LocationAdvantage />
+      <AboutUs aboutRef={aboutRef} />
+      <Glossary galleryRef={galleryRef} />
+      <FloorPlans floorRef={floorRef} />
+      <Amenities amenitiesRef={amenitiesRef} />
+      <ContactUS contactRef={contactRef}/>
+      <LocationAdvantage locationRef={locationRef} />
       <Footer />
     </div>
   );

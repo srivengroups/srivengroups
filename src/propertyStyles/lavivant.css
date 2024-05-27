@@ -3,6 +3,11 @@
     justify-content: center;
 }
 
+.lavivant .lHeroSection {
+    height: 100vh;
+    background-color: cornflowerblue;
+}
+
 .lavivant .aboutUs {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -16,4 +21,15 @@
 
 .lavivant .aboutUs p {
     text-align: justify;
+}
+
+.lavivant .uniqueSellingPrice {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.item {
+    align-self: center;
+    justify-self: center;
 }

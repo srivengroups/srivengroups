@@ -145,10 +145,10 @@ const HeroSection = () => {
     <section className="heroSection" id='home'>
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-          <Link to={"/#home"}>
+          <Link to={"/#home"} className='srivenGroupsLogo'>
             <img
               src={SrivenLogoImg}
-              alt="sky blossom logo"
+              alt="sriven groups logo"
               height="60px"
               style={{ marginRight: "20px" }}
             />
@@ -221,7 +221,7 @@ const HeroSection = () => {
               <Link to={"/#home"}>
                 <img
                   src={DsMaxImg}
-                  alt="sriven groups logo"
+                  alt="Ds max logo"
                   height="70px"
                   className='dsMaxLogo'
                 />

@@ -639,6 +639,10 @@ select:invalid { color: gray; }
     .floorPrice img {
         height: 300px;
     }
+
+    .srivenGroupsLogo img {
+        width: 100px;
+    }
 }
 
 @media screen and (max-width: 360px) {

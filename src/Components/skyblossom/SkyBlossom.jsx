@@ -598,6 +598,7 @@ height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe></no
       <ContactUS contactRef={contactRef}/>
       <LocationAdvantage locationRef={locationRef} />
       <Footer />
+      <script src="https://www.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" type="text/javascript" data-bot="113483043"></script>
     </div>
   );
 };

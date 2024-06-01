@@ -34,7 +34,7 @@ const Footer = () => {
       <div class="col-md-5 offset-md-3 mb-3">
         <div style={{textAlign: "left"}}>
           <h5>Contact</h5>
-          <p>Call Us: 9036053618</p>
+          <p>Call Us: +91 9036053618</p>
           <p>Email: info@srivengroups.com</p>
           <p>Address: No.475,3rd Floor,RBI Layout,JP Nagar 7th Phase,Bengaluru-560078</p>
         </div>

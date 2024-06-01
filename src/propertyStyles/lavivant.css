@@ -1,11 +1,74 @@
 
+/* gold -> #E0D0AA */
+/* white -> #ECECED */
+/* darkGold --> #8E6826 */
+
+/* .lavivant {
+    width: 100vw;
+} */
+
+/* .lavivant .navbar {
+    background-color: #063147;
+} */
+
+.lavivant .navbar {
+    width: 100vw;
+}
+
+.lavivant .navbar-toggler {
+    background-color: #ECECED !important;
+}
+
+.lavivant .navbar {
+    background-color: #ECECED;
+}
+
+.lavivant .navbar .nav-link {
+    color: #063147 !important;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.lavivant .navbar.scrolled .nav-link {
+    color: #063147 !important;
+    font-size: 17px;
+    font-weight: 800;
+}
+
 .lavivant .navbar-expand-lg .navbar-collapse {
-    justify-content: center;
+    justify-content: space-evenly;
+    max-width: fit-content;
+}
+
+.lavivant .navbar>.container-fluid {
+    justify-content: space-evenly !important;
 }
 
 .lavivant .lHeroSection {
-    height: 100vh;
-    background-color: cornflowerblue;
+    height: calc(100vh - 66px);
+    width: 100vw;
+}
+
+.lavivant .lHeroSection .slick-slider img {
+    width: -webkit-fill-available;
+    height: calc(100vh - 66px);
+}
+
+.lavivant .download-brochure {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border: none;
+}
+
+.lavivant .download-brochure button {
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: #ECECED;
+    background-color: #8E6826;
 }
 
 .lavivant .aboutUs {
@@ -15,8 +78,34 @@
     grid-row-gap: 50px;
     grid-column-gap: 50px;
     grid-area: auto;
-    width: 90%;
     margin: auto;
+    padding: 60px 20px;
+    background-color: #E0D0AA;
+}
+
+.lavivant .aboutUsSection {
+    background-color: #E0D0AA;
+}
+
+.lavivant .aboutUsSection h1 {
+    color: #8E6826;
+    text-align: center;
+    padding: 30px 0 0;
+}
+
+.lavivant .aboutUsSection h3 {
+   color: #063147;
+}
+
+.lavivant .aboutUs .content {
+    align-self: flex-start;
+    width: calc(100% - 20px);
+}
+
+.lavivant .aboutUs .content p {
+    color: #063147;
+    font-size: 19px;
+    font-weight: 350;
 }
 
 .lavivant .aboutUs p {
@@ -25,11 +114,564 @@
 
 .lavivant .uniqueSellingPrice {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #063147;
+    color: #E0D0AA;
+    padding: 20px 10px;
 }
 
 .item {
     align-self: center;
     justify-self: center;
 }
+
+.item-a {
+    grid-area: first;
+}
+.item-b {
+    grid-area: second;
+}
+.item-c {
+    grid-area: third;
+}
+.item-d {
+    grid-area: fourth;
+}
+.item-e {
+    grid-area: fifth;
+}
+.item-f {
+    grid-area: sixth;
+}
+.item-g {
+    grid-area: seven;
+}
+.item-h {
+    grid-area: eight;
+}
+.item-i {
+    grid-area: nine;
+}
+.item-j {
+    grid-area: ten;
+}
+
+.lavivant .floorPlans {
+    padding: 40px 10px;
+    background-color: #8E6826;
+}
+
+
+
+.lavivant .floorPlans .content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.lavivant .floorPlans h1 {
+    text-align: center;
+    color: #E0D0AA;
+}
+
+.lavivant .floorPlanGrid {
+    padding: 30px 20px;
+    background-color: #063147;
+    width: max-content;
+    margin: auto;
+}
+
+.lavivant .floorPlans .floorPlansTable {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". first first "
+        " second third fourth "
+        " fifth sixth seven "
+        " eight nine ten ";
+    border: 2px solid #8E6826;
+    color: #ECECED;
+    height: max-content;
+    height: 100%;
+}
+
+.lavivant .floorPlans .floorPlansTable .item-a {
+    justify-self: center;
+}
+
+.lavivant .contactUs {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    height: max-content;
+    flex-wrap: wrap;
+}
+
+.lavivant .form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    min-width: 400px;
+    background-color: #063147;
+    padding: 30px 20px;
+    height: 100%;
+}
+
+
+
+
+.lavivant form .formControl {
+    border: 2px solid #8E6826 !important;
+    padding: 10px 5px;
+    border: none;
+    height: 50px;
+    background-color: #063147;
+    font-size: 17px;
+    font-weight: 800;
+    border-radius: 3px;
+    color: #8E6826 !important;
+}
+
+/* .lavivant .popoverForm form, .lavivant .popoverForm .formControl {
+    background-color: #ECECED;
+    border-color: 2px solid #E0D0AA !important;
+} */
+
+.lavivant .popoverForm .form form {
+    padding: 40px 40px;
+}
+
+.lavivant form .formControl::placeholder {
+    color: #8E6826 !important;
+}
+
+.lavivant .popoverForm form h5 {
+    color: #8E6826;
+}
+
+.lavivant .formCloseBtn span {
+    font-size: 30px;
+    color: #ECECED;
+}
+
+.lavivant .navbar .enquireNow {
+    border: none;
+    background-color: #063147;
+    color: #ECECED;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 800;
+    width: fit-content;
+}
+
+.lavivant .uniqueSellingPrice {
+    width: 100vw;
+}
+
+.lavivant .uniqueSellingPrice .item {
+    display: flex;
+    width: max-content;
+    gap: 5px;
+    align-items: self-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lavivant .uniqueSellingPrice .item img {
+    height: 30px;
+    width: 30px;
+}
+
+.lavivant .aboutUs img{
+    height: 400px;
+    width: calc(100% - 20px);
+}
+
+.lavivant .contactUs img {
+    height: 500px;
+    width: 40vw;
+    margin: auto;
+}
+
+.lavivant .floorPlansCarousel {
+    width: 45vw;
+    margin: auto;
+}
+
+.lavivant .floorPlansCarousel img {
+    height: 500px;
+    width: 45vw;
+}
+
+.lavivant .footer {
+    background-color: #063147;
+    color: #E0D0AA;
+}
+  
+.lavivant .footer .col-6 {
+    text-align: left;
+  }
+  
+.lavivant .footer .secondCol .flex-column{
+    margin-top: 18%;
+}
+
+.lavivant .footer .nav-item a {
+    color: #E0D0AA;
+}
+
+.lavivant .footer svg {
+    color: #E0D0AA !important;
+}
+
+/* gallery */
+
+.lavivant .gallery h1 {
+    text-align: center;
+}
+
+.lavivant .amenities h1 {
+    text-align: center;
+    color: #8E6826;
+    padding: 20px 0;
+}
+
+.lavivant .amenities .amenityList{
+    padding: 40px 10px;
+}
+
+.lavivant .amenities .slider-container {
+    margin: auto;
+    width: 80vw;
+}
+
+.lavivant .amenities .amenityList ol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: fit-content;
+    margin: auto;
+}
+
+.lavivant .amenities .amenityList ol li {
+    height: max-content;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    border-radius: 3px;
+    color: #ECECED;
+    /* border: 2px solid #8E6826; */
+    align-self: center;
+    font-weight: 700;
+}
+
+.gallery {
+    padding: 10px;
+    background-color: #063147;
+}
+
+.gallery .gallery-slide img {
+    width: 100%;
+}
+
+.gallery .slider-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+}
+
+.gallery .gallery-slide img {
+    max-height: 500px;
+}
+
+.gallery .gallery-slider-nav img{
+    height: 100px !important;
+}
+
+.gallery .gallery-slider-nav {
+    padding: 0 40px;
+}
+
+
+.gallery .slick-slider.mainSlider {
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.gallery .slick-slider.mainSlider img {
+    width: 100%;
+}
+
+.gallery .slick-slider.navSlider {
+    max-width: 600px;
+    margin: auto;
+}
+
+.gallery .slider-container h1 {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #8E6826;
+}
+
+
+.lavivant .locationAdvantage {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 20px 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.lavivant .locationAdvantage .accordion-button::after {
+    content: none;
+}
+
+.lavivant .locationAdvantage .accordion-button {
+    display: flex;
+    justify-content: space-between;
+    background-color: #063147;
+    color: #E0D0AA;
+}
+
+.lavivant .locationAdvantageSection {
+    background-color: #E0D0AA;
+}
+
+.lavivant .locationAdvantageSection .gMap {
+    justify-self: center;
+}
+
+.lavivant .locationAdvantageSection h1 {
+    text-align: center;
+    color: #8E6826;
+    padding: 40px 0;
+}
+
+.lavivant .locationAdvantageSection li {
+    color: #063147;
+}
+
+.lavivant .locationAdvantageSection li::marker {
+    color: #8E6826;
+}
+
+.lavivant .locationAdvantageSection .accordion-button:focus {
+    box-shadow: 2px 2px 2px #8E6826 !important;
+}
+
+
+.lavivant .contactUsSection {
+    padding: 50px 10px;
+    background-color: #8E6826;
+}
+
+.lavivant .contactUsSection h1 {
+    text-align: center;
+    color: #E0D0AA;
+}
+
+/* floor plans */
+.lavivant .floorPlansTable p {
+    margin: 0;
+    padding: 10px;
+    border-right: 1px solid #8E6826;
+    border-bottom: 1px solid #8E6826;
+    cursor: pointer;
+}
+
+.lavivant .floorPlansTable p:hover {
+   background-color: #ECECED;
+   color: #063147;
+}
+
+.lavivant .floorPlansTable .item-a {
+    border: none;
+}
+
+.lavivant .floorPlansTable .item-c,  .lavivant .floorPlansTable .item-d{
+    border-top: 1px solid #8E6826;
+}
+
+  
+.lavivant .floorPlansTable p:nth-child(4n) {
+    border-right: none; /* Remove right border for the last item in each row */
+}
+  
+.lavivant .floorPlansTable p:nth-last-child(-n+4) {
+    border-bottom: none; /* Remove bottom border for the last row */
+}
+
+.lavivant .floorPlansTable .item-c{
+    border-right: 1px solid #8E6826 !important;
+}
+
+.lavivant .floorPlansTable .item-g{
+    border-bottom: 1px solid #8E6826 !important;
+}
+
+/* .lavivant .amenityCarousel {
+    max-height: 500px;
+    max-width: 900px;
+    display: block;
+} */
+
+.lavivant .amenities {
+    background-color: #063147;
+}
+
+/* .lavivant .slick-prev:before {
+    position: relative;
+    left: 30px;
+} */
+
+/* .lavivant .amenities .slick-next:before {
+    position: relative;
+    left: 30px;
+} */
+
+.lavivant .amenityCarousel .slick-slider img {
+    height: 500px;
+    width: 70vw;
+    margin: auto;
+}
+
+.lavivant .slick-dots li.slick-active button:before {
+    color: white !important;
+    font-size: 9px !important;
+}
+
+.lavivant .slick-dots li button:before {
+    color: #ECECED !important;
+    font-size: 9px !important;
+}
+
+
+@media (max-width: 992px) {
+
+    .lavivant .navbar-expand-lg .navbar-collapse {
+        max-width: none;
+    }
+
+    .lavivant .navbar .nav-link {
+        width: fit-content;
+    }
+
+    .lavivant .navbar>.container-fluid {
+        justify-content: space-between !important;
+    }
+
+    .lavivant .floorPlans .content {
+        grid-template-columns: 1fr;
+    }
+
+    .lavivant .locationAdvantage {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .lavivant .floorPlansCarousel {
+        width: 95vw;
+        margin: auto;
+    }
+
+    .lavivant .floorPlansCarousel img {
+        height: 400px;
+        width: 95vw;
+    }
+
+    .lavivant .contactUs img {
+        height: 500px;
+        width: 90vw;
+        margin: auto;
+    }
+
+    .lavivant .contactUs {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        height: max-content;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .lavivant .floorPlanGrid {
+        width: min-content;
+    }
+}
+
+@media (max-width: 768px) {
+    .lavivant .aboutUs {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .lavivant .uniqueSellingPrice {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+  /* Small Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 768px) {
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 600px) {
+    .lavivant .uniqueSellingPrice {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .gallery .slider-container {
+        padding: 20px;
+    }
+    .lavivant .amenities .amenityList ol li {
+        font-weight: 100;
+        font-size: 10px;
+    }
+
+    .lavivant .amenities .amenityList ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lavivant .amenityCarousel .slick-slider img {
+        height: 400px;
+        width: 95vw;
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .lavivant .uniqueSellingPrice {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lavivant .form form {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 340px) {
+    .lavivant .uniqueSellingPrice {
+        grid-template-columns: 1fr;
+    }
+
+}
+  
+  /* Medium Devices (Desktops) */
+  @media (min-width: 769px) and (max-width: 992px) {
+
+  }
+  
+  /* Large Devices (Large Desktops) */
+  @media (min-width: 993px) and (max-width: 1200px) {
+  
+  }
+  
+  /* Extra Large Devices */
+  @media (min-width: 1201px) {
+  
+  }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-const SkyBlossomForm = ({ sectionName, floor }) => {
+const SkyBlossomForm = ({ sectionName, floor, formName, brochureDriveId }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
@@ -46,7 +46,7 @@ const SkyBlossomForm = ({ sectionName, floor }) => {
         navigate('/skyblossom/thank-you');
         break;
       case 'brochure':
-        window.open(`https://drive.google.com/u/1/uc?id=1kAu2asev20RxZiXepWbYkPc1NjvXFk9a&export=download`, "_blank");
+        window.open(`https://drive.google.com/u/1/uc?id=${brochureDriveId}&export=download`, "_blank");
         break;
       case 'floorPlan':
         navigate('/skyblossom/floor-price', { state: { floor: floor } });
@@ -75,7 +75,7 @@ const SkyBlossomForm = ({ sectionName, floor }) => {
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "skyblossom",...formData })
+        body: encode({ "form-name": formName,...formData })
       });
     } catch (error) {
       console.log(error);
@@ -123,8 +123,8 @@ const SkyBlossomForm = ({ sectionName, floor }) => {
             onChange={handleChange}
           >
             <option value="" disabled hidden>Preferences</option>
-            <option value="2 BHK">2 BHK</option>
-            <option value="3 BHK">3 BHK</option>
+            <option value="2 BHK">{formName === "skyblossom" ? "2 BHK": "3 BHK"}</option>
+            <option value="3 BHK">{formName === "skyblossom" ? "3 BHK": "4 BHK"}</option>
           </select>
           {errors.preferences && <span className="error">{errors.preferences}</span>}
           <textarea

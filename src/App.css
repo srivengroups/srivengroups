@@ -62,7 +62,7 @@
 }
 
 
-.content {
+.mainSection .content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -305,18 +305,18 @@
 
 /***************************************************************** Contact US *************************************************************/
 
-.contactUsParent {
+.App .contactUsParent {
   margin: 150px 0;
 }
 
-.contactUs {
+.App .contactUs {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 0;
 }
 
-.contactUsParent h1 { 
+.App .contactUsParent h1 { 
   background: -webkit-linear-gradient(left, #2CD8D5, #8E37D7); /* Safari 5.1-6, Chrome 10-25 */
   background: linear-gradient(to right, #2CD8D5, #8E37D7); /* Standard syntax */
   background-size: 70% 70%;
@@ -324,7 +324,7 @@
   color: transparent; /* Use 'color' instead of '-webkit-text-fill-color' */
 }
 
-.contactUs h3 {
+.App .contactUs h3 {
     margin: auto;
     width: 80%;
     padding: 30px;
@@ -335,20 +335,20 @@
     color: transparent; /* Use 'color' instead of '-webkit-text-fill-color' */
 }
 
-.contactUsBtns, .knowMoreBtns {
+.App .contactUsBtns, .knowMoreBtns {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.contactUsBtns .MuiButton-root, .knowMoreBtns .MuiButton-root {
+.App .contactUsBtns .MuiButton-root, .knowMoreBtns .MuiButton-root {
   margin: 10px;
   min-width: 80px;
   background-image: linear-gradient(-225deg, #2CD8D5 0%, #6B8DD6 48%, #8E37D7 100%);
   opacity: 0.9;
 }
 
-.whiteBtn .MuiButton-root {
+.App .whiteBtn .MuiButton-root {
   background-color: white;
   background: -webkit-linear-gradient(left, #2CD8D5, #8E37D7); /* Safari 5.1-6, Chrome 10-25 */
   background: linear-gradient(to right, #2CD8D5, #8E37D7); /* Standard syntax */
@@ -503,22 +503,24 @@
 
 /****************************************************** footer **********************************************************************/
 
-.footer {
+.App .footer, .propertiesPage .footer, .partnerRegistration .footer, .leadregisterParent .footer, .propertyPage .footer {
   background: linear-gradient(125deg, #00FF57 0%, #010033 40%, #460043 70%, #F0FFC5 100%), linear-gradient(55deg, #0014C9 0%, #410060 100%), linear-gradient(300deg, #FFC700 0%, #001AFF 100%), radial-gradient(135% 215% at 115% 40%, #393939 0%, #393939 40%, #849561 calc(40% + 1px), #849561 60%, #EED690 calc(60% + 1px), #EED690 80%, #ECEFD8 calc(80% + 1px), #ECEFD8 100%), linear-gradient(125deg, #282D4F 0%, #282D4F 40%, #23103A calc(40% + 1px), #23103A 70%, #A0204C calc(70% + 1px), #A0204C 88%, #FF6C00 calc(88% + 1px), #FF6C00 100%);
   background-blend-mode: overlay, screen, overlay, overlay, normal;
   background-size: 100% 100%;
   color: #eee;
 }
 
-.footer .col-6 {
+.App .footer .col-6 {
   text-align: left;
 }
 
-.footer .secondCol .flex-column{
+.App .footer .secondCol .flex-column{
   margin-top: 18%;
 }
 
-.footer .nav-item a {
+.App .footer .nav-item a, .propertiesPage .footer .nav-item a,
+.partnerRegistration .footer .nav-item a, .leadregisterParent .footer .nav-item a,
+.propertyPage .footer .nav-item a{
   color: white;
 }
 
@@ -1426,7 +1428,7 @@ div.propertyFilters {
   color: #16385E !important;
 }
 
-.flatDetails, .propertyDescription, .floorPlans, .features {
+ .flatDetails, .App .propertyDescription, .App .floorPlans, .App .features {
   margin: 20px 0;
 }
 

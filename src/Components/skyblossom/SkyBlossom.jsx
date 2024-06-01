@@ -104,19 +104,19 @@ function BasicPopover({sectionName, floor}) {
           </button>
    {sectionName === 'floorPlan' && 
         <div className="floorPlanForm">
-          <SkyBlossomForm sectionName={sectionName} floor={floor} />
+          <SkyBlossomForm sectionName={sectionName} formName={'skyblossom'} floor={floor} />
         </div>
    }
    {
     sectionName === 'enquireNow' && 
        <div className={sectionName}>
-         <SkyBlossomForm sectionName={sectionName} />
+         <SkyBlossomForm sectionName={sectionName} brochureDriveId={'1kAu2asev20RxZiXepWbYkPc1NjvXFk9a'} formName={'skyblossom'} />
        </div>
    }
    {
     sectionName === 'brochure' && 
        <div className={sectionName}>
-         <SkyBlossomForm sectionName={sectionName} />
+         <SkyBlossomForm sectionName={sectionName} formName={'skyblossom'} />
        </div>
    }
 
@@ -395,7 +395,7 @@ const ContactUS = ({contactRef}) => {
           </div>
         </div>
         <div className="form">
-          <SkyBlossomForm sectionName={'contactUs'} />
+          <SkyBlossomForm sectionName={'contactUs'} formName={'skyblossom'} />
         </div>
       </div>
     </section>
@@ -557,23 +557,38 @@ const SkyBlossom = () => {
   };
 
   useEffect(() => {
-      const timer = setTimeout(() => {
-        const button = document.querySelector(`button.enquireNow`);
-        if (button) {
-          button.click();
-        }
-      }, 3000);
+    const timer = setTimeout(() => {
+      const button = document.querySelector(`button.enquireNow`);
+      if (button) {
+        button.click();
+      }
+    }, 3000);
 
-      return () => clearTimeout(timer); // Cleanup the timer on component unmount
-  }, []);
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+}, []);
   return (
     <div className='skyBlossom'>
       <Helmet>
+     
         <title>SkyBlossom</title>
         <link rel="icon" width="100px" href="../../images/favicons/skyblossom/favicon.ico" />
         <link rel="apple-touch-icon" href="../../images/favicons/skyblossom/android-chrome-192x192.png" />
         <link rel="apple-touch-icon" sizes="512x512" href="../../images/favicons/skyblossom/android-chrome-512x512.png" />
+        {/* Google Tag Manager Script */}
+        <script>
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5X7MZ7RK');
+          `}
+        </script>
       </Helmet>
+      {/* Google Tag Manager (noscript) */}
+<noscript><iframe title='skyblossom-google-tagmanager' src="https://www.googletagmanager.com/ns.html?id=GTM-5X7MZ7RK"
+height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe></noscript>
+{/* <!-- End Google Tag Manager (noscript) --> */}
       <HeroSection homeRef={homeRef} scrollToSection={scrollToSection} />
       <SellingPricePoint />
       <AboutUs aboutRef={aboutRef} />

@@ -111,6 +111,7 @@
     line-height: 2;
     align-items: flex-start;
     padding: 0 10px;
+    flex-direction: column;
 }
 
 .skyBlossom .aboutUs .content h1 {
@@ -178,13 +179,13 @@
     height: 350px;
 }
 
-.owl-theme .owl-dots .owl-dot span {
+.skyBlossom .owl-theme .owl-dots .owl-dot span {
     background: #F3E2DB;
     width: 20px !important;
     height: 20px !important;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+.skyBlossom .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: #9E4518 !important;
 }
 
@@ -193,7 +194,7 @@
 
 /* Floor plans */
 
-.floorPlans {
+.skyBlossom .floorPlans {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -207,7 +208,7 @@
     margin: 0;
 }
 
-.floorPlans::before {
+.skyBlossom .floorPlans::before {
     content: "";
     position: absolute;
     top: 0;
@@ -221,14 +222,14 @@
    z-index: -1;  /* Ensure the pseudo-element stays behind any content inside the hero section */
 }
 
-.floorPlans .plans {
+.skyBlossom .floorPlans .plans {
     display: flex;
     gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.floorPlans .plans .plan { 
+.skyBlossom .floorPlans .plans .plan { 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,11 +241,11 @@
     text-align: center;
 }
 
-.floorPlans .plans .plan h4, .floorPlans .plans .plan h2 {
+.skyBlossom .floorPlans .plans .plan h4, .floorPlans .plans .plan h2 {
     margin-bottom: 20px;
 }
 
-.floorPlans .plans .plan button {
+.skyBlossom .floorPlans .plans .plan button {
     border: 0;
     background-color: white;
     color: #9E4518;
@@ -257,7 +258,7 @@
     align-items: center;
 }
 
-.floorPlanForm, .brochure, .enquireNow {
+.skyBlossom .floorPlanForm, .brochure, .enquireNow {
     width: 400px;
     height: max-content;
     display: flex;
@@ -266,7 +267,7 @@
     margin: auto !important;
 }
 
-.floorPlanForm form, .brochure form, .enquireNow form {
+.skyBlossom .floorPlanForm form, .brochure form, .enquireNow form {
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -274,7 +275,7 @@
     padding-top: 70px;
 }
 
-.formCloseBtn, .formCloseBtn, .formCloseBtn {
+.skyBlossom .formCloseBtn, .formCloseBtn, .formCloseBtn {
     border: 0;
     background: transparent;
     position: absolute;
@@ -282,16 +283,16 @@
     top: 0;
 }
 
-.formCloseBtn span, .formCloseBtn span, .formCloseBtn span {
+.skyBlossom .formCloseBtn span, .formCloseBtn span, .formCloseBtn span {
     font-size: 30px;
     color: #9E4518;
 }
 
-.floorPlanForm .formControl, .brochure .formControl, .enquireNow .formControl {
+.skyBlossom .floorPlanForm .formControl, .brochure .formControl, .enquireNow .formControl {
     height: 6vh;
 }
 
-.floorPlanForm .form-btn, .brochure .form-btn, .enquireNow .form-btn {
+.skyBlossom .floorPlanForm .form-btn, .brochure .form-btn, .enquireNow .form-btn {
     background-color: #9E4518;
     color: whitesmoke;
     font-size: 20px;
@@ -311,7 +312,7 @@
 
 select:invalid { color: gray; }
 
-.contactUs {
+.skyBlossom .contactUs {
     display: flex;
     padding: 80px 0;
     background-image: url('../images/skyBlossom/4.jpg');
@@ -321,7 +322,7 @@ select:invalid { color: gray; }
     background-size: cover;
 }
 
-.formAndContent {
+.skyBlossom .formAndContent {
    display: flex;
    justify-content: space-between;
    width: max-content;
@@ -334,7 +335,7 @@ select:invalid { color: gray; }
    gap: 100px;
 }
 
-.formAndContent::before {
+.skyBlossom .formAndContent::before {
     content: "";
     position: absolute;
     top: 0;
@@ -346,7 +347,7 @@ select:invalid { color: gray; }
     z-index: -1;
 }
 
-.formAndContent .contactUsContent {
+.skyBlossom .formAndContent .contactUsContent {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -355,21 +356,21 @@ select:invalid { color: gray; }
     min-height: 200px;
 }
 
-.formAndContent .contactUsContent .socialLinks {
+.skyBlossom .formAndContent .contactUsContent .socialLinks {
     display: flex;
     gap: 20px;
 }
 
-.formAndContent .contactUsContent .socialLinks a {
+.skyBlossom .formAndContent .contactUsContent .socialLinks a {
     color: white;
 }
 
-.formAndContent .form form {
+.skyBlossom .formAndContent .form form {
     display: flex;
     flex-direction: column;
 }
 
-.formAndContent .form .formControl {
+.skyBlossom .formAndContent .form .formControl {
     border: 0;
     border-color: white;
     min-width: 270px;
@@ -380,40 +381,40 @@ select:invalid { color: gray; }
     border-top: 2px solid white;
 }
 
-.formAndContent .form .formControl::placeholder {
+.skyBlossom .formAndContent .form .formControl::placeholder {
     color: whitesmoke;
     opacity: 1; /* Ensures placeholder text is fully visible */
 }
-.formAndContent .form select option {
+.skyBlossom .formAndContent .form select option {
     color: #9E4518;
     font-weight: 600;
     padding: 10px 0;
 }
-.formAndContent .form .form-btn {
+.skyBlossom .formAndContent .form .form-btn {
     background-color: #9E4518;
 }
 
-.formAndContent .form .formControl:focus {
+.skyBlossom .formAndContent .form .formControl:focus {
   outline: none;
   color: white;
 }
 
-.formAndContent .form .formControl:hover {
+.skyBlossom .formAndContent .form .formControl:hover {
     cursor: pointer;
 }
 
-.locationAdvantage {
+.skyBlossom .locationAdvantage {
     text-align: center;
     padding: 40px 0;
     background-color: #F3E2DB;
 }
 
-.locationAdvantage h1 {
+.skyBlossom .locationAdvantage h1 {
     margin-bottom: 40px;
     color: #9E4518;
 }
 
-.locationAdvantageContent {
+.skyBlossom .locationAdvantageContent {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -427,7 +428,7 @@ select:invalid { color: gray; }
 
 } */
 
-.locationAdvantage .advantage {
+.skyBlossom .locationAdvantage .advantage {
     text-align: left;
     display: flex;
     align-items: center;
@@ -458,25 +459,25 @@ select:invalid { color: gray; }
     color: #9E4518; /* Adjust the color as needed */
   }
 
-  .amenities {
+  .skyBlossom .amenities {
     text-align: center;
     padding: 50px 50px;
     background-color: whitesmoke;
   }
 
-  .amenities h1 {
+  .skyBlossom .amenities h1 {
     color: #9E4518;
   }
 
-  .amenities .amenityList {
+  .skyBlossom .amenities .amenityList {
     margin: 100px 0 0;
   }
 
-  .amenities .owl-carousel .owl-item img {
+  .skyBlossom .amenities .owl-carousel .owl-item img {
     width: 80px !important;
    }
 
-   .amenities .item {
+   .skyBlossom .amenities .item {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -485,7 +486,7 @@ select:invalid { color: gray; }
     gap: 20px;
    }
 
-   .amenities .item p {
+   .skyBlossom .amenities .item p {
     font-size: 20px !important;
     font-weight: 900;
    }
@@ -497,6 +498,7 @@ select:invalid { color: gray; }
    .skyBlossom .footer {
     background-color: #9E4518 !important;
     background: none;
+    color: white !important;
    }
 
    .floorPrice {
@@ -566,6 +568,10 @@ select:invalid { color: gray; }
 
    .offcanvas.offcanvas-end {
     width: 60% !important;
+   }
+
+   .skyBlossom .footer .nav-link {
+    color: white !important;
    }
   
   /* Media query for larger screens (desktops) */

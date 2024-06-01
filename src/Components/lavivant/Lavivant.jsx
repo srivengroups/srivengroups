@@ -31,37 +31,37 @@ import FloorPlansImg8 from '../../images/lavivant/Floor Plan/8 (3).jpg';
 import FloorPlansImg9 from '../../images/lavivant/Floor Plan/9.jpg';
 
 import contactUsImg from '../../images/lavivant/La Vivante/1000 x 1000/3.jpg';
-import GymImg from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-40.jpg';
-import TheatreImg from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-43.jpg';
-import OfficeSpaceImg from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-47.jpg';
-import BadmintonImg from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-12.jpg';
-import FootballImg from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-14.jpg';
-import SwimmingPoolImg from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-17.jpg';
-import GalleryImg1 from '../../images/lavivant/La Vivante/Desktop/1.jpg';
-import GalleryImg2 from '../../images/lavivant/La Vivante/Desktop/2.jpg';
-import GalleryImg3 from '../../images/lavivant/La Vivante/Desktop/3.jpg';
-import GalleryImg4 from '../../images/lavivant/La Vivante/Desktop/4.jpg';
-import GalleryImg5 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-20.jpg';
+import GymImg from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-40.jpg';
+import TheatreImg from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-43.jpg';
+import OfficeSpaceImg from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-47.jpg';
+import BadmintonImg from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-12.jpg';
+import FootballImg from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-14.jpg';
+import SwimmingPoolImg from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-17.jpg';
+import GalleryImg1 from '../../images/lavivant/La Vivante/1000 x 1000/1.jpg';
+import GalleryImg2 from '../../images/lavivant/La Vivante/1000 x 1000/2.jpg';
+import GalleryImg3 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-53.jpg';
+import GalleryImg4 from '../../images/lavivant/1 (1).jpg';
+import GalleryImg5 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-20.jpg';
 
-import GalleryImg6 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-21.jpg';
-import GalleryImg7 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-24.jpg';
-import GalleryImg8 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-258.jpg';
-import GalleryImg9 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-28.jpg';
+import GalleryImg6 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-21.jpg';
+import GalleryImg7 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-24.jpg';
+import GalleryImg8 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-258.jpg';
+import GalleryImg9 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-28.jpg';
 
-import GalleryImg10 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-30.jpg';
-import GalleryImg11 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-31.jpg';
-import GalleryImg12 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-33.jpg';
-import GalleryImg13 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-35.jpg';
+import GalleryImg10 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-30.jpg';
+import GalleryImg11 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-31.jpg';
+import GalleryImg12 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-33.jpg';
+import GalleryImg13 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-35.jpg';
 
-import GalleryImg14 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-36.jpg';
-import GalleryImg15 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-37.jpg';
-import GalleryImg16 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-38.jpg';
-import GalleryImg17 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-39.jpg';
-import GalleryImg18 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-40.jpg';
-import GalleryImg19 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-52.jpg';
-import GalleryImg20 from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-81.jpg';
+import GalleryImg14 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-36.jpg';
+import GalleryImg15 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-37.jpg';
+import GalleryImg16 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-24.jpg';
+import GalleryImg17 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-39.jpg';
+import GalleryImg18 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-51.jpg';
+import GalleryImg19 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-52.jpg';
+import GalleryImg20 from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-81.jpg';
 
-import VillaImg from '../../images/lavivant/La Vivante/Desktop/La Vivante_Brochure_17in x 15in_Low-5.jpg';
+import VillaImg from '../../images/lavivant/La Vivante/1000 x 1000/La Vivante_Brochure_17in x 15in_Low-5.jpg';
 import VillamentImg from '../../images/lavivant/1 (1).jpg';
 
 
@@ -633,6 +633,8 @@ function AsNavFor() {
   let sliderRef1 = useRef(null);
   let sliderRef2 = useRef(null);
 
+  const isMobile = useMediaQuery('(max-width:600px)');
+
 
   useEffect(() => {
     setNav1(sliderRef1);
@@ -644,64 +646,64 @@ function AsNavFor() {
       <Slider asNavFor={nav2} ref={slider => (sliderRef1 = slider)} className='mainSlider'>
 
       <div className='gallery-slide'>
-        <img src={GalleryImg1} height={"500px"} alt="lavivant gallery 1" />
+        <img src={GalleryImg1} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 1" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg2} height={"500px"} alt="lavivant gallery 2" />
+        <img src={GalleryImg2} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 2" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg3} height={"500px"} alt="lavivant gallery 3" />
+        <img src={GalleryImg3} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 3" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg4} height={"500px"} alt="lavivant gallery 4" />
+        <img src={GalleryImg4} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 4" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg5} height={"500px"} alt="lavivant gallery 5" />
+        <img src={GalleryImg5} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 5" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg6} height={"500px"} alt="lavivant gallery 6" />
+        <img src={GalleryImg6} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 6" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg7} height={"500px"} alt="lavivant gallery 7" />
+        <img src={GalleryImg7} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 7" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg8} height={"500px"} alt="lavivant gallery 8" />
+        <img src={GalleryImg8} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 8" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg9} height={"500px"} alt="lavivant gallery 9" />
+        <img src={GalleryImg9} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 9" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg10} height={"500px"} alt="lavivant gallery 10" />
+        <img src={GalleryImg10} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 10" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg11} height={"500px"} alt="lavivant gallery 11" />
+        <img src={GalleryImg11} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 11" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg12} height={"500px"} alt="lavivant gallery 12" />
+        <img src={GalleryImg12} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 12" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg13} height={"500px"} alt="lavivant gallery 13" />
+        <img src={GalleryImg13} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 13" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg14} height={"500px"} alt="sky blossom building 14" />
+        <img src={GalleryImg14} height={isMobile ? "400px" : "500px"} alt="sky blossom building 14" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg15} height={"500px"} alt="lavivant gallery 15" />
+        <img src={GalleryImg15} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 15" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg16} height={"500px"} alt="lavivant gallery 16" />
+        <img src={GalleryImg16} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 16" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg17} height={"500px"} alt="lavivant gallery 17" />
+        <img src={GalleryImg17} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 17" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg18} height={"500px"} alt="lavivant gallery 18" />
+        <img src={GalleryImg18} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 18" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg19} height={"500px"} alt="lavivant gallery 19" />
+        <img src={GalleryImg19} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 19" />
       </div>
       <div className='gallery-slide'>
-        <img src={GalleryImg20} height={"500px"} alt="lavivant gallery 20" />
+        <img src={GalleryImg20} height={isMobile ? "400px" : "500px"} alt="lavivant gallery 20" />
       </div>
       </Slider>
       <Slider
@@ -713,6 +715,7 @@ function AsNavFor() {
         autoplay={true}
         autoplaySpeed={3000}
         className='navSlider'
+        arrows={false}
       >
                 <div className='gallery-slide'>
         <img src={GalleryImg1} alt="lavivant gallery 1" />

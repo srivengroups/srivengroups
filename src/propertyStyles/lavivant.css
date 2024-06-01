@@ -587,7 +587,7 @@
     }
 
     .lavivant .contactUs img {
-        height: 500px;
+        height: 400px;
         width: 90vw;
         margin: auto;
     }
@@ -602,7 +602,7 @@
     }
 
     .lavivant .floorPlanGrid {
-        width: min-content;
+        width: fit-content;
     }
 }
 

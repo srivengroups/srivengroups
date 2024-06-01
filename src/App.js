@@ -16,7 +16,6 @@ import SkyBlossom from './Components/skyblossom/SkyBlossom';
 import ThankYouPage from './Components/skyblossom/ThankYouPage';
 import FloorPrice from './Components/skyblossom/FloorPrice';
 import Lavivant from './Components/lavivant/Lavivant';
-import { useEffect } from'react';
 
 function App() {
 

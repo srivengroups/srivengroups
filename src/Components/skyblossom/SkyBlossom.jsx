@@ -39,10 +39,14 @@ import MobileBanner2 from '../../images/skyBlossom/mobileBanner2.jpg';
 import { Link } from "react-router-dom";
 import { useMediaQuery } from '@mui/material';
 import Footer from '../Footer';
+import useScript from '../UseScriptHook';
 
 import Popover from '@mui/material/Popover';
 import SkyBlossomForm from './SkyBlossomForm';
 import { Helmet} from 'react-helmet';
+
+import GoogleTagManagerNoscript from '../GoogleTagManagerNoscript';
+import useGoogleTagManager from '../useGoogleTagManager';
 
 function BasicPopover({sectionName, floor}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -520,6 +524,8 @@ const Amenities = ({amenitiesRef}) => {
 
 const SkyBlossom = () => {
 
+  useGoogleTagManager("GTM-5X7MZ7RK");
+
   const homeRef = useRef();
   const aboutRef = useRef();
   const galleryRef = useRef();
@@ -527,6 +533,14 @@ const SkyBlossom = () => {
   const locationRef = useRef();
   const amenitiesRef = useRef();
   const floorRef = useRef();
+
+  useScript(
+    'https://www.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js', 113483043
+  );
+
+  const gtmId = 'GTM-5X7MZ7RK'
+
+  useGoogleTagManager(gtmId);
 
   const scrollToSection = (section) => {
     switch (section) {
@@ -569,26 +583,14 @@ const SkyBlossom = () => {
   return (
     <div className='skyBlossom'>
       <Helmet>
-     
         <title>SkyBlossom</title>
         <link rel="icon" width="100px" href="../../images/favicons/skyblossom/favicon.ico" />
         <link rel="apple-touch-icon" href="../../images/favicons/skyblossom/android-chrome-192x192.png" />
         <link rel="apple-touch-icon" sizes="512x512" href="../../images/favicons/skyblossom/android-chrome-512x512.png" />
-        {/* Google Tag Manager Script */}
-        <script>
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5X7MZ7RK');
-          `}
-        </script>
+        
+        
       </Helmet>
-      {/* Google Tag Manager (noscript) */}
-<noscript><iframe title='skyblossom-google-tagmanager' src="https://www.googletagmanager.com/ns.html?id=GTM-5X7MZ7RK"
-height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe></noscript>
-{/* <!-- End Google Tag Manager (noscript) --> */}
+      <GoogleTagManagerNoscript id={"GTM-5X7MZ7RK"} />
       <HeroSection homeRef={homeRef} scrollToSection={scrollToSection} />
       <SellingPricePoint />
       <AboutUs aboutRef={aboutRef} />

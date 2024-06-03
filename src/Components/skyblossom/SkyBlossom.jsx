@@ -524,8 +524,6 @@ const Amenities = ({amenitiesRef}) => {
 
 const SkyBlossom = () => {
 
-  useGoogleTagManager("GTM-5X7MZ7RK");
-
   const homeRef = useRef();
   const aboutRef = useRef();
   const galleryRef = useRef();

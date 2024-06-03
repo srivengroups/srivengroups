@@ -28,7 +28,7 @@ const ThankYouPage = () => {
 
     return (
 
-        <>
+        <div className="thankYouPageMain">
         <Helmet>
           <title>Sky Blossom - Thank You</title>
           <meta name="description" content="Sky Blossom - Thank You" />
@@ -58,7 +58,7 @@ const ThankYouPage = () => {
         </div>
         </div>
         <Footer />
-        </>
+        </div>
     )
 }
 
